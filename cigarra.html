@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cigarra-do-cafeeiro — Manejo Integrado</title>
+  <title>Cigarra-do-cafeeiro — Manejo Agrodata</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1a0e">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
@@ -11,29 +15,16 @@
 </head>
 <body class="page-cigarra">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-success" href="index.html">AgroCafé</a>
+      <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Entomologia
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
-              <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
-              <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
-              <li><a class="dropdown-item" href="cochonilhas.html">Cochonilhas</a></li>
-              <li><a class="dropdown-item" href="acaros.html">Ácaros (V/B)</a></li>
-              <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
-              <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
-              <li><a class="dropdown-item" href="lagarta.html">Lagarta-dos-cafezais</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#pragas">Fitossanidade</a></li>
         </ul>
       </div>
     </div>
@@ -47,57 +38,64 @@
   </section>
 
   <div class="container section text-center mt-5">
-    <h2 class="mb-4 text-success"><i class="bi bi-shield-exclamation"></i> Diagnóstico Subterrâneo</h2>
+    <h2 class="mb-4 text-success"><i class="bi bi-shield-exclamation text-warning"></i> Diagnóstico Subterrâneo</h2>
     <p class="lead">O controle da cigarra exige atenção aos sinais invisíveis que ocorrem abaixo da linha do solo.</p>
 
     <div class="row mt-5 align-items-center">
       <div class="col-md-6 mb-4">
-        <img src="https://i.postimg.cc/Fzn0TMmL/Cigarra_do_cafeeiro.webp" class="img-fluid rounded shadow-lg border border-success" alt="Ninfas da cigarra nas raízes">
+        <img src="https://i.postimg.cc/Fzn0TMmL/Cigarra_do_cafeeiro.webp" class="img-fluid rounded shadow-lg border border-warning" alt="Cigarra">
       </div>
       <div class="col-md-6 mb-4 text-start">
         <h3 class="text-success">Sintomas e Danos</h3>
-        <p>As <strong>ninfas móveis</strong> habitam o solo por anos, sugando a seiva bruta. Este ataque silencioso causa:</p>
+        <p>As <strong>ninfas móveis</strong> habitam o solo, sugando a seiva bruta das raízes. Este ataque silencioso causa:</p>
         <ul>
-          <li><strong>Depauperamento:</strong> Amarelamento generalizado e queda de folhas ("esqueletamento").</li>
-          <li><strong>Morte de Ramos:</strong> Secamento de ponteiros e redução da área fotossintética.</li>
-          <li><strong>Exúvias e Orifícios:</strong> No período de emergência (chuvas), encontram-se "cascas" de cigarras no tronco e furos no solo.</li>
+          <li><strong>Amarelamento:</strong> Perda de vigor e queda de folhas ("esqueletamento").</li>
+          <li><strong>Morte de Ramos:</strong> Secamento de ponteiros devido à falha nutricional.</li>
+          <li><strong>Cascas no Tronco:</strong> Presença de exúvias na base das plantas após as primeiras chuvas.</li>
         </ul>
-        <div class="p-3 bg-dark rounded border-start border-4 border-success text-light">
-          <small><i class="bi bi-info-circle"></i> O ataque é severo pois interrompe a absorção de nutrientes exatamente nos períodos de maior demanda (enchimento de grãos).</small>
+        <div class="p-3 bg-dark rounded border-start border-4 border-warning text-light shadow">
+          <small><i class="bi bi-info-circle text-warning"></i> <strong>Ponto Crítico:</strong> O ataque interrompe a absorção de nutrientes durante o enchimento de grãos.</small>
         </div>
       </div>
     </div>
 
     <hr class="my-5 border-success opacity-25">
 
-    <div class="row mt-4">
+    <div class="row mt-4 mb-5">
       <div class="col-12 text-start">
-        <div class="p-4 rounded shadow-sm" style="background-color: var(--bg-2); color: var(--text-dark);">
-          <h3 class="fw-bold"><i class="bi bi-gear-fill"></i> Estratégia de Manejo (MIP)</h3>
-          <p>Diferente de pragas foliares, o manejo da cigarra é planejado e preventivo:</p>
-          <div class="row">
+        <div class="p-4 rounded shadow-sm bg-light border-top border-success border-5">
+          <h3 class="fw-bold text-success"><i class="bi bi-gear-fill text-warning"></i> Planejamento Técnico</h3>
+          <div class="row mt-3">
             <div class="col-md-6">
-              <h5><strong>1. Amostragem</strong></h5>
-              <p>Escavação de trincheiras (50x50x50 cm) sob a saia da planta. O nível de controle é de **10 a 30 ninfas por planta**, dependendo do vigor do cafezal.</p>
+              <h5 class="fw-bold">1. Amostragem</h5>
+              <p class="small">Escavação de trincheiras sob a saia da planta. Nível de controle: **10 a 30 ninfas por planta**.</p>
             </div>
             <div class="col-md-6">
-              <h5><strong>2. Controle Químico</strong></h5>
-              <p>Aplicação de inseticidas sistêmicos via **Drench** (esguicho no colo da planta) ou granulados, aproveitando a umidade das primeiras chuvas.</p>
+              <h5 class="fw-bold">2. Controle Químico</h5>
+              <p class="small">Inseticidas sistêmicos via **Drench** ou granulados, aplicados no período das águas.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <a href="index.html" class="btn btn-outline-success mt-5 mb-5 fw-bold px-4">
+    <a href="index.html" class="btn btn-outline-success mb-5 fw-bold px-4">
       <i class="bi bi-house-door"></i> Voltar ao Portal
     </a>
   </div>
 
-  <footer class="bg-dark text-white text-center p-4 mt-5">
-    <p class="mb-0">© 2026 AgroCafé - Manejo Integrado de Pragas</p>
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0 fw-bold">© 2026 Agrodata - Manejo Inteligente</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
