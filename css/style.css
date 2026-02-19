@@ -1,129 +1,119 @@
-
-/* === VARIÁVEIS DE CORES AGRO === */
+/* ===VARIÁVEIS DE CORES AGRO ATUALIZADAS=== */
 :root {
   --bg-1: #0b1a0e;       /* Verde floresta profundo (fundo) */
-  --bg-2: #f8fcf8;       /* Branco levemente esverdeado para seções claras */
-  --text-1: #e9f5e9;     /* Texto claro para fundos escuros */
-  --text-dark: #1a2e1d;  /* Texto escuro para fundos claros */
+  --bg-2: #f4f1ea;       /* Bege/Semente para fundos claros */
+  --text-1: #e9f5e9;     /* Texto claro */
+  --text-dark: #3e2723;  /* Marrom Café profundo para textos em fundo claro */
   --accent: #2ecc71;     /* Verde folha vibrante */
-  --accent-hover: #27ae60; 
-  --earth: #795548;      /* Marrom terra para detalhes */
+  --earth: #5d4037;      /* Marrom Terra (Sólido) */
+  --earth-light: #8d6e63;/* Marrom Argila */
+  --harvest: #ffc107;    /* Amarelo Ouro (Destaques/Avisos) */
   --muted: #a0ac9f;      /* Cinza esverdeado suave */
-  --gold: #f1c40f;       /* Dourado (colheita/sol) */
 }
 
-/* === RESET E BASE === */
+/* ===RESET E BASE=== */
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-1);
   background-color: var(--bg-1);
   overflow-x: hidden;
   scroll-behavior: smooth;
-  position: relative;
 }
 
-/* === HERO / TÍTULOS === */
+/* === HERO / TÍTULOS=== */
 .hero {
-  padding: 80px 0 20px;
+  padding: 100px 0 40px;
   text-align: center;
-  /* Gradiente que lembra o amanhecer no campo */
-  background: linear-gradient(180deg, rgba(46, 204, 113, 0.1), transparent 60%);
+  background: linear-gradient(180deg, rgba(93, 64, 55, 0.2), transparent 50%);
 }
 
 .titulo {
-  margin-top: 50px;
   font-weight: 800;
-  color: var(--accent) !important;
+  color: var(--harvest) !important; /* Título principal agora em Amarelo Ouro */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
-  letter-spacing: -1px;
 }
 
-.subtitulo {
-  color: var(--muted);
-  font-weight: 400;
-}
-
-/* === NAVBAR === */
+/* === NAVBAR=== */
 .navbar {
-  background-color: #08120a !important;
-  border-bottom: 2px solid var(--accent);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  background: var(--bg-1) !important;
+  border-bottom: 3px solid var(--earth); /* Detalhe em Marrom na base da navegação */
 }
 
 .navbar-brand {
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  color: var(--accent) !important;
-  text-transform: uppercase;
+  color: var(--harvest) !important; /* Marca em Amarelo */
 }
 
-.nav-link:hover {
-  color: var(--gold) !important;
-}
-
-/* === CARDS === */
+/* === CARDS=== */
 .card {
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  background: #142617; /* Verde oliva bem escuro */
-  color: #FFFFFF;
+  border: 1px solid var(--earth); /* Borda fina em Marrom */
+  background: #142617; 
   border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(46, 204, 113, 0.2);
-  border-color: var(--accent);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.15); /* Brilho sutil em Amarelo no hover */
+  border-color: var(--harvest); /* Borda muda para Amarelo no hover */
 }
 
-.card-title {
-  color: var(--accent);
+.card-header.bg-success {
+  background-color: var(--earth) !important; /* Cabeçalho de cotação agora é Marrom Terra */
+  color: var(--harvest) !important; /* Texto do cabeçalho em Amarelo */
+  border-bottom: 2px solid var(--harvest);
 }
 
-/* === BOTÕES (Customização Agro) === */
+/* === BOTÕES CUSTOMIZADOS === */
 .btn-success {
-  background-color: var(--accent);
-  border-color: var(--accent);
-  font-weight: 600;
+  background-color: var(--earth); /* Botão principal em Marrom */
+  border-color: var(--earth-light);
+  color: var(--harvest); /* Texto em Amarelo */
 }
 
 .btn-success:hover {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background-color: var(--earth-light);
+  border-color: var(--harvest);
+  color: #fff;
 }
 
-/* === TABELAS E SEÇÕES CLARAS === */
+.btn-outline-success {
+  color: var(--harvest);
+  border-color: var(--harvest);
+}
+
+.btn-outline-success:hover {
+  background-color: var(--harvest);
+  color: var(--earth);
+}
+
+/* === TABELA DE NUTRIÇÃO === */
 .bg-light {
-  background-color: var(--bg-2) !important;
-  color: var(--text-dark);
-}
-
-.table {
-  color: var(--text-dark);
+  background-color: var(--bg-2) !important; /* Fundo Bege para a tabela */
 }
 
 .table-dark {
-  background-color: var(--earth) !important;
-  border: none;
+  background-color: var(--earth) !important; /* Cabeçalho da tabela em Marrom */
+  color: var(--harvest) !important;
 }
 
-/* === RODAPÉ === */
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 193, 7, 0.1) !important; /* Destaque amarelado ao passar o mouse na linha */
+}
+
+/* ===RODAPÉ=== */
 footer {
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  color: var(--muted);
+  border-top: 4px solid var(--harvest); /* Linha amarela no topo do rodapé */
   background-color: #08120a;
-  text-align: center;
-  padding: 30px 0;
+  padding: 25px 0;
+  color: var(--muted);
 }
 
-/* === RESPONSIVO === */
-@media (max-width: 768px) {
-  .hero { padding: 60px 0 20px; }
-  .titulo { font-size: 2rem !important; margin-top: 80px; }
-  .hero p.lead { font-size: 1rem; }
+/* Marcador de Badge (Cotação em alta) */
+.badge.bg-success {
+  background-color: var(--accent) !important;
+  color: #000;
+  font-weight: bold;
 }
-
