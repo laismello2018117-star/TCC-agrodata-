@@ -1,3 +1,8 @@
+Para retirar o carrossel mantendo a estrutura e o equilíbrio visual da página, removi a seção <div id="galeriaCarousel"> e ajustei o espaçamento da seção de apresentação (Hero) para que a transição para os cards de pragas seja suave e profissional.
+
+Aqui está o código atualizado:
+
+HTML
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -38,45 +43,14 @@
     </div>
   </nav>
 
-  <div class="container text-center hero mt-5 pt-5">
-    <h1 class="titulo">Guia Técnico: Pragas do Café</h1>
-    <p class="lead subtitulo">Identificação, biologia e controle das principais ameaças</p>
+  <div class="container text-center hero mt-5 pt-5 mb-5">
+    <h1 class="titulo display-4 fw-bold">Guia Técnico: Pragas do Café</h1>
+    <p class="lead subtitulo">Identificação, biologia e controle das principais ameaças ao cafezal.</p>
+    <hr class="w-25 mx-auto">
   </div>
 
-  <div class="container mt-5 section">
-    <h2 class="text-center mb-4">Pragas em Destaque</h2>
-    <div id="galeriaCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner rounded shadow-lg">
-        
-        <div class="carousel-item active">
-          <img src="https://www.agrolink.com.br/upload/problemas/Hypothenemus_hampei41.jpg" class="d-block w-100" alt="Broca">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
-            <h5>Broca-do-café</h5>
-            <p>A praga que perfura o grão.</p>
-            <a href="broca.html" class="btn btn-success btn-sm">Ver Detalhes</a>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://i.postimg.cc/tT60Rjv4/bicho-mineiro4.jpg" class="d-block w-100" alt="Bicho-mineiro">
-          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
-            <h5>Bicho-mineiro</h5>
-            <p>Responsável pela desfolha severa.</p>
-            <a href="bicho-mineiro.html" class="btn btn-success btn-sm">Ver Detalhes</a>
-          </div>
-        </div>
-
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </div>
-
-  <div class="container mt-5 section">
+  <div class="container mt-4 section">
+    <h2 class="text-center mb-5">Selecione a Praga para Manejo</h2>
     <div class="row text-center">
       
       <div class="col-md-4 mb-4">
@@ -84,9 +58,9 @@
           <div class="card h-100 shadow-sm border-0">
             <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
             <div class="card-body">
-              <h5 class="card-title">Broca-do-café</h5>
-              <p class="card-text">Danos nos frutos e perda de qualidade.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Broca-do-café</h5>
+              <p class="card-text text-muted">Danos nos frutos e perda de qualidade comercial.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -95,11 +69,11 @@
       <div class="col-md-4 mb-4">
         <a href="bicho-mineiro.html" class="text-decoration-none text-dark">
           <div class="card h-100 shadow-sm border-0">
-            <img src="https://www.revistacampoenegocio.com.br/wp-content/uploads/2020/06/Bicho-mineiro-1.jpg" class="card-img-top" alt="Bicho-mineiro">
+            <img src="https://i.postimg.cc/tT60Rjv4/bicho-mineiro4.jpg" class="card-img-top" alt="Bicho-mineiro">
             <div class="card-body">
-              <h5 class="card-title">Bicho-mineiro</h5>
-              <p class="card-text">O inimigo das folhas em tempos secos.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Bicho-mineiro</h5>
+              <p class="card-text text-muted">O maior inimigo das folhas em períodos de seca.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -110,9 +84,9 @@
           <div class="card h-100 shadow-sm border-0">
             <img src="https://revistacultivar.com.br/media/fotos/cochonilha_cafe_3.jpg" class="card-img-top" alt="Cochonilhas">
             <div class="card-body">
-              <h5 class="card-title">Cochonilhas</h5>
-              <p class="card-text">Pragas sugadoras e o problema da fumagina.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Cochonilhas</h5>
+              <p class="card-text text-muted">Pragas sugadoras e o problema da fumagina.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -123,9 +97,9 @@
           <div class="card h-100 shadow-sm border-0">
             <img src="https://www.agrolink.com.br/upload/problemas/Oligonychus_ilicis41.jpg" class="card-img-top" alt="Ácaros">
             <div class="card-body">
-              <h5 class="card-title">Ácaros (V/B)</h5>
-              <p class="card-text">Danos por ácaro-vermelho e branco.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Ácaros (V/B)</h5>
+              <p class="card-text text-muted">Danos por ácaro-vermelho e ácaro-branco.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -136,9 +110,9 @@
           <div class="card h-100 shadow-sm border-0">
             <img src="https://static.portaldogrone.com/image/2019/12/cigarra-do-cafe.jpg" class="card-img-top" alt="Cigarra">
             <div class="card-body">
-              <h5 class="card-title">Cigarra</h5>
-              <p class="card-text">Ataque silencioso nas raízes.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Cigarra</h5>
+              <p class="card-text text-muted">Ataque silencioso diretamente nas raízes.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -149,9 +123,9 @@
           <div class="card h-100 shadow-sm border-0">
             <img src="https://cloud.cnpgc.embrapa.br/sac-citros/files/2012/05/acaro-leprose.jpg" class="card-img-top" alt="Leprose">
             <div class="card-body">
-              <h5 class="card-title">Ácaro-da-leprose</h5>
-              <p class="card-text">Vetor de vírus e queda de frutos.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Ácaro-da-leprose</h5>
+              <p class="card-text text-muted">Vetor de vírus e causa de queda de frutos.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -162,9 +136,9 @@
           <div class="card h-100 shadow-sm border-0">
             <img src="https://ainfo.cnptia.embrapa.br/digital/bitstream/item/182604/1/Lagarta.jpg" class="card-img-top" alt="Lagarta">
             <div class="card-body">
-              <h5 class="card-title">Lagarta-dos-cafezais</h5>
-              <p class="card-text">Manejo em viveiros e plantas jovens.</p>
-              <span class="btn btn-outline-primary btn-sm">Acessar</span>
+              <h5 class="card-title fw-bold">Lagarta-dos-cafezais</h5>
+              <p class="card-text text-muted">Manejo em viveiros e plantas em formação.</p>
+              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
             </div>
           </div>
         </a>
@@ -173,13 +147,13 @@
     </div>
   </div>
 
-  <footer class="bg-dark text-white text-center p-3 mt-5">
-    <p>© 2025 Guia Agronômico - Manejo Integrado de Pragas</p>
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2026 Guia Agronômico - Manejo Integrado de Pragas (MIP)</p>
+      <small class="text-secondary">Desenvolvido para auxílio técnico na cafeicultura.</small>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
 </body>
 </html>
