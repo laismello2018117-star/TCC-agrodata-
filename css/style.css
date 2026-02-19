@@ -1,17 +1,28 @@
-/* ===VARIÁVEIS DE CORES=== */
+Para adaptar o seu CSS ao universo Agro, substituiremos os tons azulados e "galácticos" por uma paleta orgânica baseada em Verde Folha, Terra (Marrom) e Bege Semente.
+
+O design manterá a sofisticação, mas com uma sensação de frescor e natureza.
+
+Aqui está o arquivo style.css adaptado:
+
+CSS
+/* === VARIÁVEIS DE CORES AGRO === */
 :root {
-  --bg-1: #04050a;       /* fundo mais escuro */
-  --bg-2: #071029;       /* fundo gradiente azul profundo */
-  --text-1: #e6f0ff;     /* texto padrão claro */
-  --accent: #FFD700;     /* dourado/estrela */
-  --muted: #A9A9A9;      /* cinza suave */
+  --bg-1: #0b1a0e;       /* Verde floresta profundo (fundo) */
+  --bg-2: #f8fcf8;       /* Branco levemente esverdeado para seções claras */
+  --text-1: #e9f5e9;     /* Texto claro para fundos escuros */
+  --text-dark: #1a2e1d;  /* Texto escuro para fundos claros */
+  --accent: #2ecc71;     /* Verde folha vibrante */
+  --accent-hover: #27ae60; 
+  --earth: #795548;      /* Marrom terra para detalhes */
+  --muted: #a0ac9f;      /* Cinza esverdeado suave */
+  --gold: #f1c40f;       /* Dourado (colheita/sol) */
 }
 
-/* ===RESET E BASE=== */
+/* === RESET E BASE === */
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-1);
   background-color: var(--bg-1);
   overflow-x: hidden;
@@ -19,63 +30,106 @@ html, body {
   position: relative;
 }
 
-/* === HERO / TÍTULOS=== */
+/* === HERO / TÍTULOS === */
 .hero {
-  padding: 120px 0 40px;
+  padding: 80px 0 20px;
   text-align: center;
-  background: linear-gradient(180deg, rgba(0,0,0,0.15), transparent 40%);
+  /* Gradiente que lembra o amanhecer no campo */
+  background: linear-gradient(180deg, rgba(46, 204, 113, 0.1), transparent 60%);
 }
 
 .titulo {
-  margin-top: 100px;
-  font-weight: 700;
+  margin-top: 50px;
+  font-weight: 800;
   color: var(--accent) !important;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .subtitulo {
   color: var(--muted);
+  font-weight: 400;
 }
 
-/* === NAVBAR=== */
+/* === NAVBAR === */
 .navbar {
-  background: linear-gradient(90deg, var(--bg-1), #1C1F2A);
+  background-color: #08120a !important;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: 1px;
-  color: #F0E68C !important;
+  color: var(--accent) !important;
+  text-transform: uppercase;
 }
 
-/* === CARDS=== */
+.nav-link:hover {
+  color: var(--gold) !important;
+}
 
+/* === CARDS === */
 .card {
-  border: none;
-  background: #1C1F2A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #142617; /* Verde oliva bem escuro */
   color: #FFFFFF;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(46, 204, 113, 0.2);
+  border-color: var(--accent);
 }
 
-/* ===RODAPÉ=== */
+.card-title {
+  color: var(--accent);
+}
+
+/* === BOTÕES (Customização Agro) === */
+.btn-success {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.btn-success:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* === TABELAS E SEÇÕES CLARAS === */
+.bg-light {
+  background-color: var(--bg-2) !important;
+  color: var(--text-dark);
+}
+
+.table {
+  color: var(--text-dark);
+}
+
+.table-dark {
+  background-color: var(--earth) !important;
+  border: none;
+}
+
+/* === RODAPÉ === */
 footer {
   font-size: 0.9rem;
-  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255,255,255,0.1);
   color: var(--muted);
-  background-color: var(--bg-1);
+  background-color: #08120a;
   text-align: center;
-  padding: 15px 0;
+  padding: 30px 0;
 }
 
-/* ===RESPONSIVO=== */
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
-  .hero h1 { font-size: clamp(24px, 7vw, 36px); }
+  .hero { padding: 60px 0 20px; }
+  .titulo { font-size: 2rem !important; margin-top: 80px; }
   .hero p.lead { font-size: 1rem; }
 }
 
