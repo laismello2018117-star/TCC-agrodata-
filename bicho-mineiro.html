@@ -1,91 +1,94 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bicho-mineiro — Manejo Integrado</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bicho-mineiro — Manejo Agrodata</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1a0e">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="page-bicho-mineiro">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">AgroCafé</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Monitoramento</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Entomologia
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
-            <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
-            <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
-            <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
-            <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
-          </ul>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#pragas">Fitossanidade</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section class="hero bg-success text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.revistacampoenegocio.com.br/wp-content/uploads/2020/06/Bicho-mineiro-1.jpg') center/cover;">
-  <div class="container py-5">
-    <h1 class="display-4 fw-bold">Bicho-mineiro</h1>
-    <p class="lead">O principal responsável pela desfolha precoce e perda de produtividade.</p>
-  </div>
-</section>
-
-<div class="container section text-center mt-5">
-  <h2 class="mb-4">O que é o Bicho-mineiro?</h2>
-  <p class="lead">A <em>Leucoptera coffeella</em> é uma pequena mariposa cujas larvas se alimentam do parênquima foliar.</p>
-
-  <div class="row mt-5 align-items-center">
-    <div class="col-md-6 mb-4 text-start">
-      <h3>Danos e Identificação</h3>
-      <p>A larva vive protegida entre as epidermes da folha, criando as famosas <strong>"minas"</strong>. Os principais prejuízos incluem:</p>
-      <ul>
-        <li><strong>Necrose Foliar:</strong> As minas tornam-se manchas marrons e secas.</li>
-        <li><strong>Desfolha:</strong> Em ataques severos, a planta perde as folhas, reduzindo a fotossíntese.</li>
-        <li><strong>Secamento de Ramos:</strong> A perda de folhas impede a maturação adequada dos frutos.</li>
-      </ul>
-      <p>O ataque é favorecido por <strong>períodos de seca</strong> e baixa umidade relativa do ar.</p>
+  <section class="hero text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.revistacampoenegocio.com.br/wp-content/uploads/2020/06/Bicho-mineiro-1.jpg') center/cover;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold titulo">Bicho-mineiro</h1>
+      <p class="lead subtitulo">A principal causa de desfolha precoce nos cafezais.</p>
     </div>
-    <div class="col-md-6 mb-4">
-      <img src="https://static.portaldogrone.com/image/2021/08/bicho-mineiro-cafe.jpg" class="img-fluid rounded shadow" alt="Folha de café com minas de bicho-mineiro">
+  </section>
+
+  <div class="container section text-center mt-5">
+    <h2 class="mb-4 text-success"><i class="bi bi-moisture text-warning"></i> O Inimigo do Tempo Seco</h2>
+    <p class="lead">A <em>Leucoptera coffeella</em> cria "minas" que destroem a capacidade fotossintética da planta.</p>
+
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-6 mb-4 text-start">
+        <h3 class="text-success">Danos e Identificação</h3>
+        <p>A larva vive protegida entre as camadas da folha. Os principais prejuízos são:</p>
+        <ul>
+          <li><strong>Necrose Foliar:</strong> Manchas marrons circulares que se espalham.</li>
+          <li><strong>Desfolha Severa:</strong> Queda de folhas começando pelo topo da planta.</li>
+          <li><strong>Perda de Safra:</strong> Menos folhas significam menos energia para o enchimento de grãos.</li>
+        </ul>
+        <div class="p-3 bg-dark rounded border-start border-4 border-warning text-light">
+          <small><i class="bi bi-exclamation-triangle-fill text-warning"></i> <strong>Atenção:</strong> O ataque é agressivo em períodos de seca e baixa umidade.</small>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="https://static.portaldogrone.com/image/2021/08/bicho-mineiro-cafe.jpg" class="img-fluid rounded shadow-lg border border-warning" alt="Folha com minas">
+      </div>
     </div>
+
+    <div class="row mt-4 mb-5">
+      <div class="col-12 text-start">
+        <div class="p-4 rounded shadow-sm bg-light text-dark border-top border-success border-5">
+          <h4 class="fw-bold text-success"><i class="bi bi-shield-check"></i> Manejo Integrado</h4>
+          <ol class="mt-3">
+            <li><strong>Monitoramento:</strong> Contagem de folhas com minas vivas no terço superior.</li>
+            <li><strong>Controle Químico:</strong> Inseticidas sistêmicos via solo ou foliar (conforme bula).</li>
+            <li><strong>Biológico:</strong> Preservação de vespas predadoras (as "caçadoras" naturais).</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn btn-outline-success mb-5 fw-bold px-4">
+      <i class="bi bi-house-door"></i> Voltar ao Portal
+    </a>
   </div>
 
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0 fw-bold">© 2026 Agrodata - Inteligência Fitossanitária</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
-
-  <div class="row mt-4">
-    <div class="col-12 text-start bg-light p-4 rounded">
-      <h3>Estratégias de Controle</h3>
-      <p>O manejo do Bicho-mineiro deve ser integrado, combinando as seguintes práticas:</p>
-      <ol>
-        <li><strong>Monitoramento:</strong> Avaliar a porcentagem de folhas atacadas no terço médio e superior das plantas.</li>
-        <li><strong>Controle Químico:</strong> Uso de inseticidas sistêmicos via solo ou pulverizações foliares.</li>
-        <li><strong>Controle Biológico:</strong> Preservação de vespas predadoras e uso de produtos à base de microrganismos.</li>
-      </ol>
-    </div>
-  </div>
-
-  <a href="index.html" class="btn btn-outline-dark mt-4 mb-5">← Voltar à Galeria</a>
-</div>
-
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2025 Portal do Café - Todos os direitos reservados.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
