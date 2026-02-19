@@ -1,73 +1,95 @@
-Aqui está o código adaptado para o tema Broca-do-café (Hypothenemus hampei). Mantive toda a estrutura de navegação (Bootstrap), as seções de Hero, conteúdo e o rodapé, apenas alterando os textos, classes de estilo e imagens para o contexto agrícola.
-
-HTML
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Broca-do-café — Manejo Integrado</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Broca-do-café — Manejo Agrodata</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1a0e">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="page-broca">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">AgroDefesa</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Monitoramento</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#pragas">Fitossanidade</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="entomoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Entomologia
-          </a>
-          <ul class="dropdown-menu dropdown-d1" aria-labelledby="entomoDropdown">
-            <li><a class="dropdown-item" href="bichomineiro.html">Bicho-mineiro</a></li>
-            <li><a class="dropdown-item" href="broca-do-cafe.html">Broca-do-café</a></li>
+  <section class="hero text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.agrolink.com.br/upload/problemas/Hypothenemus_hampei41.jpg') center/cover;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold titulo">Broca-do-café</h1>
+      <p class="lead subtitulo">A praga que ataca diretamente o coração do seu lucro: o grão.</p>
+    </div>
+  </section>
+
+  <div class="container section text-center mt-5">
+    <h2 class="mb-4 text-success"><i class="bi bi-target text-warning"></i> Impacto na Qualidade</h2>
+    <p class="lead">A <em>Hypothenemus hampei</em> perfura os frutos para reprodução, causando perdas de peso e qualidade.</p>
+
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-6 mb-4">
+        <img src="https://www.agrolink.com.br/upload/problemas/Hypothenemus_hampei41.jpg" class="img-fluid rounded shadow-lg border border-warning" alt="Fruto brocado">
+      </div>
+      <div class="col-md-6 mb-4 text-start">
+        <h3 class="text-success">Danos Principais</h3>
+        <p>A fêmea perfura a coroa do fruto, gerando prejuízos severos:</p>
+        <ul>
+          <li><strong>Perda de Peso:</strong> O grão é consumido internamente pelas larvas.</li>
+          <li><strong>Queda de Frutos:</strong> Frutos atacados na fase de "chumbinho" caem precocemente.</li>
+          <li><strong>Qualidade da Bebida:</strong> O orifício permite a entrada de fungos e leveduras que causam fermentações indesejadas.</li>
+        </ul>
+        <div class="p-3 bg-dark rounded border-start border-4 border-warning text-light">
+          <small><i class="bi bi-info-circle-fill text-warning"></i> <strong>Ponto Chave:</strong> A colheita bem feita e o repasse são as melhores armas para reduzir a infestação no ano seguinte.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4 mb-5">
+      <div class="col-12 text-start">
+        <div class="p-4 rounded shadow-sm bg-light text-dark border-top border-success border-5">
+          <h4 class="fw-bold text-success"><i class="bi bi-shield-shaded"></i> Manejo Recomendado</h4>
+          <p class="mt-3">O controle deve ser iniciado quando o índice de frutos brocados atingir **3 a 5%**. As opções incluem:</p>
+          <ul class="small">
+            <li><strong>Biológico:</strong> Uso do fungo <em>Beauveria bassiana</em> em condições de alta umidade.</li>
+            <li><strong>Químico:</strong> Inseticidas recomendados aplicados no momento do "trânsito" das fêmeas.</li>
+            <li><strong>Cultural:</strong> Limpeza total da lavoura após a colheita.</li>
           </ul>
-        </li>
-
-      </ul>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
 
-<section class="hero bg-success text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2070') center/cover;">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Broca-do-café</h1>
-    <p class="lead">A principal praga dos frutos, comprometendo a qualidade e o rendimento da safra.</p>
-  </div>
-</section>
-
-<div class="container section text-center mt-5">
-  <h2 class="mb-4">O que é a Broca-do-café?</h2>
-  <p>A broca-do-café (<em>Hypothenemus hampei</em>) é um pequeno besouro preto que perfura o fruto do café para depositar seus ovos, destruindo o grão por dentro.</p>
-
-  <div class="row mt-5 align-items-center">
-    <div class="col-md-6 mb-4">
-      <img src="https://www.agrolink.com.br/upload/problemas/Hypothenemus_hampei41.jpg" class="img-fluid rounded shadow" alt="Fruto de café atacado pela broca">
-    </div>
-    <div class="col-md-6 mb-4 text-start">
-      <p>O ataque ocorre diretamente no <strong>fruto</strong>, onde a fêmea perfura a coroa do grão. O prejuízo é duplo: a perda de peso do café beneficiado e a depreciação severa da qualidade da bebida, devido aos processos de fermentação e fungos que entram pelo orifício.</p>
-      <p>O manejo eficiente exige monitoramento constante, colheita bem feita (repasse) e, quando necessário, controle químico ou biológico com o fungo <em>Beauveria bassiana</em>.</p>
-    </div>
+    <a href="index.html" class="btn btn-outline-success mb-5 fw-bold px-4">
+      <i class="bi bi-house-door"></i> Voltar ao Portal
+    </a>
   </div>
 
-  <a href="index.html" class="btn btn-outline-dark mt-4 mb-5">← Voltar ao Início</a>
-</div>
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0 fw-bold">© 2026 Agrodata - Inteligência Fitossanitária</p>
+  </footer>
 
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2025 Portal do Café - Todos os direitos reservados.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
