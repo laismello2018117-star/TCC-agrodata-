@@ -1,13 +1,13 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Manejo de Pragas do Café</title>
+  <title>Manejo de Pragas e Nutrição do Café</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="home-page">
 
@@ -20,134 +20,117 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Pragas do Café
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
-              <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
-              <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
-              <li><a class="dropdown-item" href="cochonilhas.html">Cochonilhas</a></li>
-              <li><a class="dropdown-item" href="acaros.html">Ácaros (Verm./Branco)</a></li>
-              <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
-              <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
-              <li><a class="dropdown-item" href="lagarta.html">Lagarta-dos-cafezais</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#cotacao">Cotações</a></li>
+          <li class="nav-item"><a class="nav-link" href="#deficiencias">Nutrição</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container text-center hero mt-5 pt-5 mb-5">
-    <h1 class="titulo display-4 fw-bold">Guia Técnico: Pragas do Café</h1>
-    <p class="lead subtitulo">Identificação, biologia e controle das principais ameaças ao cafezal.</p>
-    <hr class="w-25 mx-auto">
+  <div class="container text-center hero mt-5 pt-5 mb-4">
+    <h1 class="titulo display-4 fw-bold">Portal Técnico do Café</h1>
+    <p class="lead subtitulo">Informações essenciais para o cafeicultor moderno.</p>
   </div>
+
+  <section id="cotacao" class="container mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm border-success">
+          <div class="card-header bg-success text-white fw-bold text-center">
+            <i class="bi bi-graph-up-arrow"></i> Cotação do Café (Referência)
+          </div>
+          <div class="card-body">
+            <div class="row text-center">
+              <div class="col-6 border-end">
+                <small class="text-muted d-block">Arábica (Tipo 6 - Bebida Dura)</small>
+                <h3 class="fw-bold">R$ 1.450,00</h3>
+                <span class="badge bg-success">+1.2% <i class="bi bi-caret-up-fill"></i></span>
+              </div>
+              <div class="col-6">
+                <small class="text-muted d-block">Conilon (Tipo 7 - Esp. Santo)</small>
+                <h3 class="fw-bold">R$ 1.280,00</h3>
+                <span class="badge bg-danger">-0.5% <i class="bi bi-caret-down-fill"></i></span>
+              </div>
+            </div>
+            <div class="text-center mt-3">
+              <small class="text-muted italic">Última atualização: Fevereiro de 2026</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="container mt-4 section">
-    <h2 class="text-center mb-5">Selecione a Praga para Manejo</h2>
+    <h2 class="text-center mb-4"><i class="bi bi-bug"></i> Guia de Pragas</h2>
     <div class="row text-center">
-      
-      <div class="col-md-4 mb-4">
-        <a href="broca.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Broca-do-café</h5>
-              <p class="card-text text-muted">Danos nos frutos e perda de qualidade comercial.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <a href="bicho-mineiro.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/tT60Rjv4/bicho-mineiro4.jpg" class="card-img-top" alt="Bicho-mineiro">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Bicho-mineiro</h5>
-              <p class="card-text text-muted">O maior inimigo das folhas em períodos de seca.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <a href="cochonilhas.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/3xZm60KC/Cochonilhas.webp" class="card-img-top" alt="Cochonilhas">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Cochonilhas</h5>
-              <p class="card-text text-muted">Pragas sugadoras e o problema da fumagina.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <a href="acaros.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/sxZ2Rq74/Acarorv.webp" class="card-img-top" alt="Ácaros">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Ácaros (V/B)</h5>
-              <p class="card-text text-muted">Danos por ácaro-vermelho e ácaro-branco.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <a href="cigarra.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/Fzn0TMmL/Cigarra-do-cafeeiro.webp" class="card-img-top" alt="Cigarra">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Cigarra</h5>
-              <p class="card-text text-muted">Ataque silencioso diretamente nas raízes.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <a href="acaro-leprose.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/pV18Mtb5/acaro-da-leprose.jpg" class="card-img-top" alt="Leprose">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Ácaro-da-leprose</h5>
-              <p class="card-text text-muted">Vetor de vírus e causa de queda de frutos.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <a href="lagarta.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/5t3YPhSn/Lagarta-dos-cafezais.webp" class="card-img-top" alt="Lagarta">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Lagarta-dos-cafezais</h5>
-              <p class="card-text text-muted">Manejo em viveiros e plantas em formação.</p>
-              <span class="btn btn-outline-primary btn-sm mt-2">Acessar Guia</span>
-            </div>
-          </div>
-        </a>
-      </div>
-
-    </div>
+        <div class="col-md-4 mb-4">
+            <a href="broca.html" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Broca-do-café</h5>
+                        <span class="btn btn-outline-primary btn-sm">Ver Guia</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        </div>
   </div>
 
-  <footer class="bg-dark text-white text-center p-4 mt-5">
-    <div class="container">
-      <p class="mb-0">© 2026 Guia Agronômico - Manejo Integrado de Pragas (MIP)</p>
-      <small class="text-secondary">Desenvolvido para auxílio técnico na cafeicultura.</small>
+  <section id="deficiencias" class="container mt-5 mb-5 py-4 bg-light rounded shadow-sm">
+    <h2 class="text-center mb-4"><i class="bi bi-leaf"></i> Guia de Deficiências Nutricionais</h2>
+    <p class="text-center text-muted mb-5">Identifique a carência de minerais através do aspecto visual das folhas.</p>
+    
+    
+    
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Nutriente</th>
+            <th>Sintomas Visuais</th>
+            <th>Localização na Planta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fw-bold">Nitrogênio (N)</td>
+            <td>Amarelamento generalizado (clorose) da folha.</td>
+            <td>Folhas Velhas (Base)</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Fósforo (P)</td>
+            <td>Folhas com tonalidade roxa ou bronzeada; queda prematura.</td>
+            <td>Folhas Velhas</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Potássio (K)</td>
+            <td>Necrose (queima) nas bordas das folhas.</td>
+            <td>Folhas Velhas</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Magnésio (Mg)</td>
+            <td>Clorose entre as nervuras (a nervura continua verde).</td>
+            <td>Folhas Velhas</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Boro (B)</td>
+            <td>Folhas novas deformadas, pequenas e com pontas secas.</td>
+            <td>Folhas Novas (Ponteiro)</td>
+          </tr>
+          <tr>
+            <td class="fw-bold">Zinco (Zn)</td>
+            <td>Folhas pequenas, estreitas e entrenós curtos ("roseta").</td>
+            <td>Folhas Novas</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p class="mb-0">© 2026 AgroCafé - Manejo Integrado e Nutrição</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
