@@ -1,119 +1,126 @@
-/* ===VARIÁVEIS DE CORES AGRO ATUALIZADAS=== */
+/* === VARIÁVEIS DE CORES AGRO (V2) === */
 :root {
-  --bg-1: #0b1a0e;       /* Verde floresta profundo (fundo) */
-  --bg-2: #f4f1ea;       /* Bege/Semente para fundos claros */
+  --bg-1: #0b1a0e;       /* Verde floresta profundo */
+  --bg-2: #f8fcf8;       /* Branco levemente esverdeado para seções claras */
   --text-1: #e9f5e9;     /* Texto claro */
-  --text-dark: #3e2723;  /* Marrom Café profundo para textos em fundo claro */
-  --accent: #2ecc71;     /* Verde folha vibrante */
-  --earth: #5d4037;      /* Marrom Terra (Sólido) */
-  --earth-light: #8d6e63;/* Marrom Argila */
-  --harvest: #ffc107;    /* Amarelo Ouro (Destaques/Avisos) */
-  --muted: #a0ac9f;      /* Cinza esverdeado suave */
+  --text-dark: #1a2e1d;  /* Texto escuro */
+  --accent: #2ecc71;     /* Verde folha principal */
+  --accent-hover: #27ae60; 
+  --harvest: #ffc107;    /* Amarelo Ouro para DETALHES */
+  --muted: #a0ac9f;      /* Cinza esverdeado */
 }
 
-/* ===RESET E BASE=== */
+/* === RESET E BASE === */
 html, body {
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-1);
   background-color: var(--bg-1);
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-/* === HERO / TÍTULOS=== */
+/* === HERO / TÍTULOS === */
 .hero {
-  padding: 100px 0 40px;
+  padding: 80px 0 20px;
   text-align: center;
-  background: linear-gradient(180deg, rgba(93, 64, 55, 0.2), transparent 50%);
+  background: linear-gradient(180deg, rgba(46, 204, 113, 0.1), transparent 60%);
 }
 
 .titulo {
+  margin-top: 50px;
   font-weight: 800;
-  color: var(--harvest) !important; /* Título principal agora em Amarelo Ouro */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--harvest) !important; /* Detalhe: Título em Amarelo */
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
-/* === NAVBAR=== */
+.subtitulo {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* === NAVBAR === */
 .navbar {
-  background: var(--bg-1) !important;
-  border-bottom: 3px solid var(--earth); /* Detalhe em Marrom na base da navegação */
+  background-color: #08120a !important;
+  border-bottom: 2px solid var(--accent);
 }
 
 .navbar-brand {
-  color: var(--harvest) !important; /* Marca em Amarelo */
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: var(--accent) !important;
+  text-transform: uppercase;
 }
 
-/* === CARDS=== */
+/* Detalhe: Links da navbar brilham em amarelo no hover */
+.nav-link:hover {
+  color: var(--harvest) !important;
+}
+
+/* === CARDS === */
 .card {
-  border: 1px solid var(--earth); /* Borda fina em Marrom */
+  border: 1px solid rgba(255, 255, 255, 0.05);
   background: #142617; 
+  color: #FFFFFF;
   border-radius: 12px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.15); /* Brilho sutil em Amarelo no hover */
-  border-color: var(--harvest); /* Borda muda para Amarelo no hover */
+  box-shadow: 0 12px 24px rgba(255, 193, 7, 0.2); /* Detalhe: Sombra com tom amarelado */
+  border-color: var(--harvest); /* Detalhe: Borda muda para amarelo */
 }
 
-.card-header.bg-success {
-  background-color: var(--earth) !important; /* Cabeçalho de cotação agora é Marrom Terra */
-  color: var(--harvest) !important; /* Texto do cabeçalho em Amarelo */
-  border-bottom: 2px solid var(--harvest);
+.card-title {
+  color: var(--accent); /* Mantém o título do card em verde para equilíbrio */
 }
 
-/* === BOTÕES CUSTOMIZADOS === */
+/* === BOTÕES === */
 .btn-success {
-  background-color: var(--earth); /* Botão principal em Marrom */
-  border-color: var(--earth-light);
-  color: var(--harvest); /* Texto em Amarelo */
+  background-color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
 }
 
 .btn-success:hover {
-  background-color: var(--earth-light);
+  background-color: var(--harvest); /* Detalhe: Botão fica amarelo no hover */
   border-color: var(--harvest);
-  color: #fff;
+  color: #000;
 }
 
-.btn-outline-success {
-  color: var(--harvest);
-  border-color: var(--harvest);
-}
-
+/* Detalhe: Botões de "Acessar Guia" com borda amarela no hover */
 .btn-outline-success:hover {
   background-color: var(--harvest);
-  color: var(--earth);
+  border-color: var(--harvest);
+  color: #000;
 }
 
-/* === TABELA DE NUTRIÇÃO === */
+/* === TABELAS E SEÇÕES CLARAS === */
 .bg-light {
-  background-color: var(--bg-2) !important; /* Fundo Bege para a tabela */
+  background-color: var(--bg-2) !important;
+  color: var(--text-dark);
 }
 
-.table-dark {
-  background-color: var(--earth) !important; /* Cabeçalho da tabela em Marrom */
+/* Detalhe: Ícones dentro das tabelas ou botões em Amarelo */
+.bi-leaf-fill, .bi-bug-fill, .bi-currency-dollar {
   color: var(--harvest) !important;
 }
 
-.table-hover tbody tr:hover {
-  background-color: rgba(255, 193, 7, 0.1) !important; /* Destaque amarelado ao passar o mouse na linha */
-}
-
-/* ===RODAPÉ=== */
+/* === RODAPÉ === */
 footer {
-  border-top: 4px solid var(--harvest); /* Linha amarela no topo do rodapé */
+  font-size: 0.9rem;
+  border-top: 2px solid var(--harvest); /* Detalhe: Linha amarela no topo do rodapé */
   background-color: #08120a;
-  padding: 25px 0;
-  color: var(--muted);
+  text-align: center;
+  padding: 30px 0;
 }
 
-/* Marcador de Badge (Cotação em alta) */
+/* Badge de cotação em alta (Amarelo para atrair atenção) */
 .badge.bg-success {
-  background-color: var(--accent) !important;
+  background-color: var(--harvest) !important;
   color: #000;
   font-weight: bold;
 }
