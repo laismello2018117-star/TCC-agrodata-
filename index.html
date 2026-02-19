@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agrodata - App de Manejo</title>
+  <title>Agrodata - Portal Técnico do Café</title>
 
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0b1a0e">
@@ -20,34 +20,36 @@
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
       <div class="ms-auto">
-         <a href="#cotacao" class="text-white text-decoration-none me-3 small"><i class="bi bi-graph-up-arrow text-warning"></i> Cotações</a>
+         <a href="#cotacao" class="text-white text-decoration-none me-2 small">
+           <i class="bi bi-graph-up-arrow text-warning"></i> Cotações
+         </a>
       </div>
     </div>
   </nav>
 
   <div class="container text-center hero mb-4">
     <h1 class="titulo display-4">Portal Técnico</h1>
-    <p class="lead subtitulo">Consultoria fitossanitária de bolso.</p>
+    <p class="lead subtitulo">Tecnologia e manejo de precisão.</p>
   </div>
 
   <section id="cotacao" class="container mb-5">
     <div class="row justify-content-center">
-      <div class="col-md-8">
+      <div class="col-md-8 text-center">
         <div class="card shadow border-success">
-          <div class="card-header bg-success text-white fw-bold py-3 text-center">
+          <div class="card-header bg-success text-white fw-bold py-3">
             <i class="bi bi-currency-dollar text-warning"></i> MERCADO FÍSICO 2026
           </div>
           <div class="card-body py-4">
-            <div class="row align-items-center text-center">
+            <div class="row align-items-center">
               <div class="col-6 border-end border-secondary">
                 <small class="text-muted d-block text-uppercase mb-1">Arábica T6</small>
-                <h4 class="fw-bold mb-0">R$ 1.450</h4>
-                <span class="badge bg-success mt-2">+1.2%</span>
+                <h3 class="fw-bold mb-0">R$ 1.450</h3>
+                <span class="badge bg-success mt-2">+1.2% <i class="bi bi-caret-up-fill"></i></span>
               </div>
               <div class="col-6">
                 <small class="text-muted d-block text-uppercase mb-1">Conilon T7</small>
-                <h4 class="fw-bold mb-0">R$ 1.280</h4>
-                <span class="badge bg-danger mt-2">-0.5%</span>
+                <h3 class="fw-bold mb-0">R$ 1.280</h3>
+                <span class="badge bg-danger mt-2">-0.5% <i class="bi bi-caret-down-fill"></i></span>
               </div>
             </div>
           </div>
@@ -58,112 +60,59 @@
 
   <section id="pragas" class="container text-center mb-5">
     <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
-      <button class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePragas">
-        <i class="bi bi-bug-fill me-2 text-warning"></i> Guia de Pragas e Doenças
-      </button>
+      <div class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase">
+        <i class="bi bi-bug-fill me-2 text-warning"></i> Catálogo Fitossanitário
+      </div>
     </div>
 
-    <div class="collapse show" id="collapsePragas"> <div class="row text-center g-4">
-        
-        <div class="col-6 col-md-4">
-          <a href="broca.html" class="text-decoration-none">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">Broca-do-café</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="bicho-mineiro.html" class="text-decoration-none">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/tT60Rjv4/bicho_mineiro4.jpg" class="card-img-top" alt="Bicho-mineiro">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">Bicho-mineiro</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="ferrugem.html" class="text-decoration-none">
-            <div class="card h-100 shadow-sm border-0 border-warning">
-              <img src="https://static.portaldogrone.com/image/2020/05/ferrugem-do-cafe.jpg" class="card-img-top" alt="Ferrugem">
-              <div class="card-body p-2 text-warning">
-                <h6 class="card-title fw-bold mb-0">Ferrugem</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="cochonilhas.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/3xZm60KC/Cochonilhas.webp" class="card-img-top" alt="Cochonilhas">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">Cochonilhas</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="mancha-aureolada.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0 border-warning">
-              <img src="https://i.postimg.cc/8PzL7Gzy/Mancha-Aureolada.jpg" class="card-img-top" alt="Mancha Aureolada">
-              <div class="card-body p-2 text-warning">
-                <h6 class="card-title fw-bold mb-0">M. Aureolada</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="acaros.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/sxZ2Rq74/Ácarorv.webp" class="card-img-top" alt="Ácaros">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">Ácaros (V/B)</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="cigarra.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/Fzn0TMmL/Cigarra_do_cafeeiro.webp" class="card-img-top" alt="Cigarra">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">Cigarra</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="acaro-leprose.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/pV18Mtb5/ácaro_da_leprose.jpg" class="card-img-top" alt="Leprose">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">A. Leprose</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-md-4">
-          <a href="lagarta.html" class="text-decoration-none text-dark">
-            <div class="card h-100 shadow-sm border-0">
-              <img src="https://i.postimg.cc/5t3YPhSn/Lagarta_dos_cafezais.webp" class="card-img-top" alt="Lagarta">
-              <div class="card-body p-2">
-                <h6 class="card-title fw-bold mb-0">Lagarta</h6>
-              </div>
-            </div>
-          </a>
-        </div>
-
+    <div class="row text-center g-3">
+      <div class="col-6 col-md-4">
+        <a href="broca.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
+            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-dark">Broca-do-café</h6></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="bicho-mineiro.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://i.postimg.cc/tT60Rjv4/bicho_mineiro4.jpg" class="card-img-top" alt="Bicho-mineiro">
+            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-dark">Bicho-mineiro</h6></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="ferrugem.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://static.portaldogrone.com/image/2020/05/ferrugem-do-cafe.jpg" class="card-img-top" alt="Ferrugem">
+            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-warning">Ferrugem</h6></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="mancha-aureolada.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://i.postimg.cc/8PzL7Gzy/Mancha-Aureolada.jpg" class="card-img-top" alt="Mancha Aureolada">
+            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-warning">M. Aureolada</h6></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="acaro-leprose.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://pro-site-v2-agroadvance.s3.amazonaws.com/wp-content/uploads/2021/08/30094034/acaro-leprose.jpg" class="card-img-top" alt="Leprose">
+            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-dark">A. Leprose</h6></div>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <a href="lagarta.html" class="text-decoration-none">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://i.postimg.cc/5t3YPhSn/Lagarta_dos_cafezais.webp" class="card-img-top" alt="Lagarta">
+            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-dark">Lagarta</h6></div>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -171,27 +120,26 @@
   <section id="nutricao" class="container text-center mb-5 pb-5">
     <div class="d-grid gap-2 col-md-6 mx-auto">
       <button class="btn btn-dark btn-lg shadow fw-bold py-3 text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutricao">
-        <i class="bi bi-leaf-fill text-warning me-2"></i> Diagnóstico Nutricional
+        <i class="bi bi-leaf-fill text-warning me-2"></i> Guia Nutricional
       </button>
     </div>
-    </section>
+  </section>
 
-  <footer class="mt-5">
-    <div class="container text-center">
-      <p class="mb-0 fw-bold">© 2026 Agrodata</p>
-      <small>Manejo de Precisão</small>
-    </div>
+  <footer class="mt-5 text-center p-4 bg-dark text-white">
+    <p class="mb-0 fw-bold">© 2026 Agrodata</p>
+    <small>Versão 1.0.0 (Offline Ready)</small>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
+    // Registro do Service Worker ajustado para GitHub Pages
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function() {
         navigator.serviceWorker
-          .register("/sw.js")
-          .then(res => console.log("Service Worker Registrado"))
-          .catch(err => console.log("Erro no Service Worker", err));
+          .register("sw.js") // Removida a barra / inicial
+          .then(res => console.log("Agrodata App: Pronto"))
+          .catch(err => console.log("Erro ao carregar App", err));
       });
     }
   </script>
