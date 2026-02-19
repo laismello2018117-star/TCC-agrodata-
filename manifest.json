@@ -1,0 +1,23 @@
+{
+  "short_name": "Agrodata",
+  "name": "Agrodata - Portal Técnico do Café",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#0b1a0e",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#0b1a0e",
+  "description": "Guia técnico de pragas, doenças e nutrição do cafeeiro."
+}
