@@ -1,88 +1,99 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ácaro-da-leprose — Manejo Integrado</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ácaro-da-leprose — Manejo Agrodata</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1a0e">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="page-leprose">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">AgroCafé</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Monitoramento</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Entomologia
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
-            <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
-            <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
-            <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
-            <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<section class="hero bg-success text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cloud.cnpgc.embrapa.br/sac-citros/files/2012/05/acaro-leprose.jpg') center/cover;">
-  <div class="container py-5">
-    <h1 class="display-4 fw-bold">Ácaro-da-leprose</h1>
-    <p class="lead">O minúsculo vetor que causa grandes perdas por queda de frutos.</p>
-  </div>
-</section>
-
-<div class="container section text-center mt-5">
-  <h2 class="mb-4">Entendendo o Ácaro-da-leprose</h2>
-  <p class="lead">O <em>Brevipalpus phoenicis</em> é uma das pragas mais complexas devido à sua capacidade de transmitir o vírus da leprose.</p>
-
-  <div class="row mt-5 align-items-center">
-    <div class="col-md-6 mb-4">
-      <img src="https://pro-site-v2-agroadvance.s3.amazonaws.com/wp-content/uploads/2021/08/30094034/acaro-leprose.jpg" class="img-fluid rounded shadow" alt="Ácaro da leprose no café">
-    </div>
-    <div class="col-md-6 mb-4 text-start">
-      <h3>Danos e Sintomas</h3>
-      <p>O ácaro atua sugando a planta, mas o maior impacto é a introdução do vírus nos tecidos. Fique atento aos sinais:</p>
-      <ul>
-        <li><strong>Manchas nos Frutos:</strong> Lesões anelares de cor marrom ou corticosa que depreciam o produto.</li>
-        <li><strong>Queda Prematura:</strong> Frutos infectados tendem a cair antes da maturação completa.</li>
-        <li><strong>Ramos Secos:</strong> Em ataques severos, os ramos podem secar, comprometendo a safra futura.</li>
-      </ul>
-      <p>Ele prefere ambientes protegidos, como o interior da copa e a fenda do fruto.</p>
-    </div>
-  </div>
-
-  
-
-  <div class="row mt-4">
-    <div class="col-12 text-start">
-      <div class="alert alert-warning">
-        <h4 class="alert-heading">Dica de Manejo!</h4>
-        <p>O controle deve ser preventivo. Como o ácaro é muito pequeno e se esconde em locais de difícil acesso, a tecnologia de aplicação (volume de calda) é crucial para garantir que o acaricida atinja o alvo.</p>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Fitossanidade
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
+              <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
+              <li><a class="dropdown-item" href="ferrugem.html">Ferrugem</a></li>
+              <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
+
+  <section class="hero text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://pro-site-v2-agroadvance.s3.amazonaws.com/wp-content/uploads/2021/08/30094034/acaro-leprose.jpg') center/cover;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold titulo">Ácaro-da-leprose</h1>
+      <p class="lead subtitulo">Vetor do vírus da leprose citrosa no cafeeiro.</p>
+    </div>
+  </section>
+
+  <div class="container section text-center mt-5">
+    <h2 class="mb-4 text-success"><i class="bi bi-bug-fill text-warning"></i> O Inimigo Invisível</h2>
+    <p class="lead">O <em>Brevipalpus phoenicis</em> é uma das pragas mais complexas devido à sua capacidade de transmitir vírus.</p>
+
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-6 mb-4">
+        <img src="https://pro-site-v2-agroadvance.s3.amazonaws.com/wp-content/uploads/2021/08/30094034/acaro-leprose.jpg" class="img-fluid rounded shadow-lg border border-warning" alt="Ácaro da leprose">
+      </div>
+      <div class="col-md-6 mb-4 text-start">
+        <h3 class="text-success">Danos e Sintomas</h3>
+        <ul>
+          <li><strong>Manchas nos Frutos:</strong> Lesões anelares marrons que depreciam o valor do café.</li>
+          <li><strong>Queda de Frutos:</strong> Ataques severos provocam a queda prematura, reduzindo a safra.</li>
+          <li><strong>Morte de Ramos:</strong> O vírus causa o secamento dos ponteiros infectados.</li>
+        </ul>
+        <div class="p-3 bg-dark rounded border-start border-4 border-warning text-light">
+          <small><i class="bi bi-exclamation-triangle-fill text-warning"></i> <strong>Ponto Crítico:</strong> Ele se esconde nas fendas dos frutos e no interior da copa, exigindo alta tecnologia de aplicação.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4 mb-5">
+      <div class="col-12 text-start">
+        <div class="p-4 rounded shadow-sm bg-light text-dark border-top border-warning border-5">
+          <h4 class="fw-bold text-success">Estratégia de Controle</h4>
+          <p>O controle deve ser baseado no **Monitoramento**. Realize a amostragem em frutos e ramos. O uso de acaricidas específicos deve respeitar a rotação de princípios ativos para evitar resistência.</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn btn-outline-success mb-5 fw-bold px-4">
+      <i class="bi bi-house-door"></i> Voltar ao Portal
+    </a>
   </div>
 
-  <a href="index.html" class="btn btn-outline-dark mt-4 mb-5">← Voltar à Galeria</a>
-</div>
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0 fw-bold">© 2026 Agrodata - Inteligência Fitossanitária</p>
+  </footer>
 
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2025 Portal do Café - Todos os direitos reservados.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.register("/sw.js");
+      });
+    }
+  </script>
 </body>
 </html>
