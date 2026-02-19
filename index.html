@@ -1,3 +1,8 @@
+Entendido. O problema é que o botão "Catálogo Fitossanitário" está usando uma div em vez de um link <a>, por isso ele não reage ao clique. Além disso, falta o "alvo" (ID) para onde a página deve rolar.
+
+Aqui está o seu index.html com o botão corrigido e a funcionalidade de rolagem restaurada:
+
+HTML
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -60,12 +65,12 @@
 
   <section id="pragas" class="container text-center mb-5">
     <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
-      <div class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase">
+      <a href="#grid-cards" class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase">
         <i class="bi bi-bug-fill me-2 text-warning"></i> Catálogo Fitossanitário
-      </div>
+      </a>
     </div>
 
-    <div class="row text-center g-3">
+    <div id="grid-cards" class="row text-center g-3">
       <div class="col-6 col-md-4">
         <a href="broca.html" class="text-decoration-none text-dark">
           <div class="card h-100 shadow-sm border-0">
