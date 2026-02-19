@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ferrugem-do-Cafeeiro — Manejo Fitopatológico</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="page-ferrugem">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="index.html">AgroCafé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Fitossanidade
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
+              <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
+              <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
+              <li><a class="dropdown-item" href="ferrugem.html">Ferrugem-do-Café</a></li>
+              <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.cnpma.embrapa.br/informativo/imagens/ferrugem_cafe.jpg') center/cover;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold titulo">Ferrugem-do-Cafeeiro</h1>
+      <p class="lead subtitulo">Identificação e controle da principal doença fúngica da cafeicultura.</p>
+    </div>
+  </section>
+
+  <div class="container section text-center mt-5">
+    <h2 class="mb-4 text-success"><i class="bi bi-exclamation-triangle-fill"></i> O Terror das Folhas</h2>
+    <p class="lead">Causada pelo fungo <em>Hemileia vastatrix</em>, a ferrugem pode reduzir a produção em até 50% se não controlada.</p>
+
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-6 mb-4">
+        <img src="https://www.cafepoint.com.br/arquivos-portal/noticias/ferrugem_alerta_pr.jpg" class="img-fluid rounded shadow-lg border border-warning" alt="Sintoma de Ferrugem no Café">
+      </div>
+      <div class="col-md-6 mb-4 text-start">
+        <h3 class="text-success">Sintomas Clássicos</h3>
+        <p>A identificação precoce é feita observando a <strong>face inferior</strong> das folhas:</p>
+        <ul>
+          <li><strong>Pústulas Alaranjadas:</strong> Manchas circulares cobertas por um pó amarelo/alaranjado (esporos).</li>
+          <li><strong>Clorose:</strong> Manchas claras na face superior da folha correspondentes à lesão abaixo.</li>
+          <li><strong>Desfolha Acentuada:</strong> Em ataques severos, a planta perde as folhas, impedindo a maturação dos frutos.</li>
+        </ul>
+        <div class="p-3 bg-dark rounded border-start border-4 border-warning text-light">
+          <small><i class="bi bi-droplets-fill text-warning"></i> <strong>Fator Climático:</strong> O fungo se espalha rapidamente com chuva, vento e temperaturas entre 21°C e 25°C.</small>
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-5 border-success opacity-25">
+
+    <div class="row mt-4 mb-5">
+      <div class="col-12 text-start">
+        <div class="p-4 rounded shadow-sm bg-light text-dark border-top border-warning border-5">
+          <h3 class="fw-bold"><i class="bi bi-shield-check text-success"></i> Medidas de Controle</h3>
+          <div class="row mt-3">
+            <div class="col-md-4">
+              <h5 class="fw-bold text-success">Controle Genético</h5>
+              <p>O uso de variedades resistentes (como Catucaí, Arara ou IPR) é a forma mais barata e eficiente de evitar a doença.</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="fw-bold text-success">Controle Químico</h5>
+              <p>Aplicação preventiva de fungicidas cúpricos ou sistêmicos (Triazóis e Estrobilurinas) via foliar ou solo.</p>
+            </div>
+            <div class="col-md-4">
+              <h5 class="fw-bold text-success">Espaçamento</h5>
+              <p>Manter a lavoura arejada e podada facilita a circulação de ar e diminui a umidade, dificultando a vida do fungo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn btn-outline-success mb-5 fw-bold px-4">
+      <i class="bi bi-house-door"></i> Voltar ao Portal
+    </a>
+  </div>
+
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0 fw-bold">© 2026 AgroCafé - Proteção de Cultivos</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
