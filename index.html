@@ -27,7 +27,7 @@
     </div>
   </nav>
 
-  <div class="container text-center hero mb-4">
+  <div class="container text-center hero mb-4" style="margin-top: 80px;">
     <h1 class="titulo display-4">Portal Técnico</h1>
     <p class="lead subtitulo">Tecnologia e manejo de precisão.</p>
   </div>
@@ -58,85 +58,88 @@
     </div>
   </section>
 
-  <section id="pragas" class="container text-center mb-5">
+  <section id="pragas" class="container text-center mb-4">
     <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
-      <a href="#grid-cards" class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase">
+      <button class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase" 
+              type="button" data-bs-toggle="collapse" data-bs-target="#collapsePragas">
         <i class="bi bi-bug-fill me-2 text-warning"></i> Catálogo Fitossanitário
-      </a>
+      </button>
     </div>
 
-    <div id="grid-cards" class="row text-center g-3">
-      <div class="col-6 col-md-4">
-        <a href="broca.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Broca-do-café</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="bicho-mineiro.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/tT60Rjv4/bicho_mineiro4.jpg" class="card-img-top" alt="Bicho-mineiro">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Bicho-mineiro</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="ferrugem.html" class="text-decoration-none">
-          <div class="card h-100 shadow-sm border-0 border-warning">
-            <img src="https://i.postimg.cc/qRHwnhxh/ferrugem.jpg" class="card-img-top" alt="Ferrugem">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-warning">Ferrugem</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="cochonilhas.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/3xZm60KC/Cochonilhas.webp" class="card-img-top" alt="Cochonilhas">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Cochonilhas</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="acaros.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/sxZ2Rq74/Ácarorv.webp" class="card-img-top" alt="Ácaros">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Ácaros (V/B)</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="cigarra.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/Fzn0TMmL/Cigarra_do_cafeeiro.webp" class="card-img-top" alt="Cigarra">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Cigarra</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="mancha-aureolada.html" class="text-decoration-none">
-          <div class="card h-100 shadow-sm border-0 border-warning">
-            <img src="https://i.postimg.cc/KY0c3B2N/Glossario_de_alvos_mancha_aureolada_Pseudomonas_syringae_pv_garcae.webp" class="card-img-top" alt="Mancha Aureolada">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-warning">Mancha aureolada</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="acaro-leprose.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/pV18Mtb5/ácaro_da_leprose.jpg" class="card-img-top" alt="Leprose">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Ácaro da Leprose</h6></div>
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4">
-        <a href="lagarta.html" class="text-decoration-none text-dark">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="https://i.postimg.cc/5t3YPhSn/Lagarta_dos_cafezais.webp" class="card-img-top" alt="Lagarta">
-            <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Lagarta</h6></div>
-          </div>
-        </a>
+    <div class="collapse" id="collapsePragas">
+      <div class="row text-center g-3 pb-4">
+        <div class="col-6 col-md-4">
+          <a href="broca.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg" class="card-img-top" alt="Broca">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Broca-do-café</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="bicho-mineiro.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://i.postimg.cc/tT60Rjv4/bicho_mineiro4.jpg" class="card-img-top" alt="Bicho-mineiro">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Bicho-mineiro</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="ferrugem.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm border-0 border-warning">
+              <img src="https://i.postimg.cc/qRHwnhxh/ferrugem.jpg" class="card-img-top" alt="Ferrugem">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-warning">Ferrugem</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="cochonilhas.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://i.postimg.cc/3xZm60KC/Cochonilhas.webp" class="card-img-top" alt="Cochonilhas">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Cochonilhas</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="acaros.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://i.postimg.cc/sxZ2Rq74/Ácarorv.webp" class="card-img-top" alt="Ácaros">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Ácaros (V/B)</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="cigarra.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://i.postimg.cc/Fzn0TMmL/Cigarra_do_cafeeiro.webp" class="card-img-top" alt="Cigarra">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Cigarra</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="mancha-aureolada.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm border-0 border-warning">
+              <img src="https://i.postimg.cc/8PzL7Gzy/Mancha-Aureolada.jpg" class="card-img-top" alt="Mancha Aureolada">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0 text-warning">M. Aureolada</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="acaro-leprose.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://pro-site-v2-agroadvance.s3.amazonaws.com/wp-content/uploads/2021/08/30094034/acaro-leprose.jpg" class="card-img-top" alt="Leprose">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">A. Leprose</h6></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="lagarta.html" class="text-decoration-none text-dark">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="https://i.postimg.cc/5t3YPhSn/Lagarta_dos_cafezais.webp" class="card-img-top" alt="Lagarta">
+              <div class="card-body p-2"><h6 class="card-title fw-bold mb-0">Lagarta</h6></div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -148,7 +151,7 @@
       </button>
     </div>
 
-    <div class="collapse mt-4" id="collapseNutricao">
+    <div class="collapse" id="collapseNutricao">
       <div class="card card-body bg-light border-0 shadow-lg text-dark">
         <h4 class="mb-4 fw-bold text-success text-uppercase">Deficiências Nutricionais</h4>
         <div class="table-responsive px-1">
