@@ -1,73 +1,103 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cigarra-do-cafeeiro — Manejo Integrado</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cigarra-do-cafeeiro — Manejo Integrado</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="page-cigarra">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">AgroCafé</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Monitoramento</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Entomologia
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
-            <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
-            <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
-            <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
-            <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
-          </ul>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="index.html">AgroCafé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Entomologia
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
+              <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
+              <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
+              <li><a class="dropdown-item" href="cochonilhas.html">Cochonilhas</a></li>
+              <li><a class="dropdown-item" href="acaros.html">Ácaros (V/B)</a></li>
+              <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
+              <li><a class="dropdown-item" href="acaro-leprose.html">Ácaro-da-leprose</a></li>
+              <li><a class="dropdown-item" href="lagarta.html">Lagarta-dos-cafezais</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<section class="hero bg-success text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://static.portaldogrone.com/image/2019/12/cigarra-do-cafe.jpg') center/cover;">
-  <div class="container py-5">
-    <h1 class="display-4 fw-bold">Cigarra-do-cafeeiro</h1>
-    <p class="lead">Uma ameaça silenciosa que ataca o sistema radicular da planta.</p>
-  </div>
-</section>
-
-<div class="container section text-center mt-5">
-  <h2 class="mb-4">O que é a Cigarra-do-cafeeiro?</h2>
-  <p class="lead">Diferente de outras pragas, o maior dano da cigarra ocorre abaixo do solo.</p>
-
-  <div class="row mt-5 align-items-center">
-    <div class="col-md-6 mb-4">
-      <img src="https://www.revistacampoenegocio.com.br/wp-content/uploads/2020/11/Cigarra-2.jpg" class="img-fluid rounded shadow" alt="Ninfas da cigarra nas raízes">
+  <section class="hero text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://static.portaldogrone.com/image/2019/12/cigarra-do-cafe.jpg') center/cover;">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold titulo">Cigarra-do-cafeeiro</h1>
+      <p class="lead subtitulo">Uma ameaça subterrânea que drena o vigor das raízes.</p>
     </div>
-    <div class="col-md-6 mb-4 text-start">
-      <h3>Sintomas e Danos</h3>
-      <p>As <strong>ninfas móveis</strong> vivem no solo e sugam a seiva das raízes do café. Esse processo debilita a planta de forma progressiva:</p>
-      <ul>
-        <li><strong>Depauperamento:</strong> A planta apresenta queda de folhas e amarelamento.</li>
-        <li><strong>Redução de Produtividade:</strong> Menor enchimento de grãos e morte de ramos superiores.</li>
-        <li><strong>Orifícios no solo:</strong> Presença de pequenos furos na projeção da saia do cafeeiro, por onde os adultos emergem.</li>
-      </ul>
-      <p>O ataque é mais comum em solos arenosos e períodos após as primeiras chuvas, quando ocorre a revoada dos adultos.</p>
+  </section>
+
+  <div class="container section text-center mt-5">
+    <h2 class="mb-4 text-success"><i class="bi bi-shield-exclamation"></i> Diagnóstico Subterrâneo</h2>
+    <p class="lead">O controle da cigarra exige atenção aos sinais invisíveis que ocorrem abaixo da linha do solo.</p>
+
+    <div class="row mt-5 align-items-center">
+      <div class="col-md-6 mb-4">
+        <img src="https://www.revistacampoenegocio.com.br/wp-content/uploads/2020/11/Cigarra-2.jpg" class="img-fluid rounded shadow-lg border border-success" alt="Ninfas da cigarra nas raízes">
+      </div>
+      <div class="col-md-6 mb-4 text-start">
+        <h3 class="text-success">Sintomas e Danos</h3>
+        <p>As <strong>ninfas móveis</strong> habitam o solo por anos, sugando a seiva bruta. Este ataque silencioso causa:</p>
+        <ul>
+          <li><strong>Depauperamento:</strong> Amarelamento generalizado e queda de folhas ("esqueletamento").</li>
+          <li><strong>Morte de Ramos:</strong> Secamento de ponteiros e redução da área fotossintética.</li>
+          <li><strong>Exúvias e Orifícios:</strong> No período de emergência (chuvas), encontram-se "cascas" de cigarras no tronco e furos no solo.</li>
+        </ul>
+        <div class="p-3 bg-dark rounded border-start border-4 border-success text-light">
+          <small><i class="bi bi-info-circle"></i> O ataque é severo pois interrompe a absorção de nutrientes exatamente nos períodos de maior demanda (enchimento de grãos).</small>
+        </div>
+      </div>
     </div>
+
+    <hr class="my-5 border-success opacity-25">
+
+    <div class="row mt-4">
+      <div class="col-12 text-start">
+        <div class="p-4 rounded shadow-sm" style="background-color: var(--bg-2); color: var(--text-dark);">
+          <h3 class="fw-bold"><i class="bi bi-gear-fill"></i> Estratégia de Manejo (MIP)</h3>
+          <p>Diferente de pragas foliares, o manejo da cigarra é planejado e preventivo:</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h5><strong>1. Amostragem</strong></h5>
+              <p>Escavação de trincheiras (50x50x50 cm) sob a saia da planta. O nível de controle é de **10 a 30 ninfas por planta**, dependendo do vigor do cafezal.</p>
+            </div>
+            <div class="col-md-6">
+              <h5><strong>2. Controle Químico</strong></h5>
+              <p>Aplicação de inseticidas sistêmicos via **Drench** (esguicho no colo da planta) ou granulados, aproveitando a umidade das primeiras chuvas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn btn-outline-success mt-5 mb-5 fw-bold px-4">
+      <i class="bi bi-house-door"></i> Voltar ao Portal
+    </a>
   </div>
 
-  <div class="row mt-4">
-    <div class="col-12 text-start">
-      <h3>Manejo Recomendado</h3>
-      <p>O controle deve ser feito preferencialmente via solo com inseticidas sistêmicos. É fundamental realizar a amostragem cavando trincheiras de 50x50cm para contar o número de ninfas por planta antes de decidir pela aplicação.</p>
-    </div>
-  </div>
+  <footer class="bg-dark text-white text-center p-4 mt-5">
+    <p class="mb-0">© 2026 AgroCafé - Manejo Integrado de Pragas</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
