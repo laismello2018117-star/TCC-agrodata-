@@ -1,34 +1,33 @@
-// Lista de arquivos para cache (Funcionamento Offline)
+const CACHE_NAME = 'agrodata-v1';
+
+// Usamos caminhos relativos (sem a barra / no início) para funcionar no GitHub Pages
 const assets = [
-  "/agrodata/",
-  "/agrodata/index.html",
-  "/agrodata/broca.html",
-  "/agrodata/ferrugem.html",
-  "/agrodata/mancha-aureolada.html",
-  "/agrodata/bicho-mineiro.html",
-  "/agrodata/cochonilhas.html",
-  "/agrodata/acaros.html",
-  "/agrodata/cigarra.html",
-  "/agrodata/acaro-leprose.html",
-  "/agrodata/lagarta.html",
-  "/agrodata/css/style.css",
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
-  "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  './',
+  './index.html',
+  './broca.html',
+  './ferrugem.html',
+  './mancha-aureolada.html',
+  './bicho-mineiro.html',
+  './acaro-leprose.html',
+  './lagarta.html',
+  './css/style.css',
+  'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css',
+  'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'
 ];
 
-// Instala o Service Worker e armazena os arquivos no cache
-self.addEventListener("install", installEvent => {
-  installEvent.waitUntil(
+// Instalação: Salva os arquivos essenciais no navegador
+self.addEventListener('install', event => {
+  event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      console.log("Caching assets...");
+      console.log('Agrodata: Arquivos cacheados com sucesso');
       return cache.addAll(assets);
     })
   );
 });
 
-// Ativa o Service Worker e remove caches antigos se houver
-self.addEventListener("activate", activateEvent => {
-  activateEvent.waitUntil(
+// Ativação: Limpa caches antigos de versões anteriores
+self.addEventListener('activate', event => {
+  event.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(
         keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))
@@ -37,11 +36,11 @@ self.addEventListener("activate", activateEvent => {
   );
 });
 
-// Estratégia de busca: Tenta o Cache primeiro, se não tiver, vai à rede
-self.addEventListener("fetch", fetchEvent => {
-  fetchEvent.respondWith(
-    caches.match(fetchEvent.request).then(res => {
-      return res || fetch(fetchEvent.request);
+// Estratégia: Tenta carregar da rede, se falhar (offline), busca no cache
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    fetch(event.request).catch(() => {
+      return caches.match(event.request);
     })
   );
 });
