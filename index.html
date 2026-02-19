@@ -21,7 +21,6 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="#cotacao">Cotações</a></li>
-          <li class="nav-item"><a class="nav-link" href="#deficiencias">Nutrição</a></li>
         </ul>
       </div>
     </div>
@@ -58,7 +57,7 @@
     </div>
   </section>
 
-  <section id="pragas" class="container text-center mb-5">
+  <section id="pragas" class="container text-center mb-4">
     <div class="d-grid gap-2 col-md-6 mx-auto">
       <button class="btn btn-success btn-lg shadow fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePragas" aria-expanded="false" aria-controls="collapsePragas">
         <i class="bi bi-bug-fill"></i> ACESSAR CONTROLE FITOSSANITÁRIO
@@ -67,7 +66,6 @@
 
     <div class="collapse mt-4" id="collapsePragas">
       <div class="row text-center">
-        
         <div class="col-md-4 mb-4">
           <a href="broca.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -79,7 +77,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 mb-4">
           <a href="bicho-mineiro.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -91,7 +88,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 mb-4">
           <a href="cochonilhas.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -103,7 +99,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 mb-4">
           <a href="acaros.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -115,7 +110,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 mb-4">
           <a href="cigarra.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -127,7 +121,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 mb-4">
           <a href="acaro-leprose.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -139,7 +132,6 @@
             </div>
           </a>
         </div>
-
         <div class="col-md-4 mb-4 mx-auto">
           <a href="lagarta.html" class="text-decoration-none text-dark">
             <div class="card h-100 shadow-sm border-0">
@@ -151,34 +143,40 @@
             </div>
           </a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="deficiencias" class="container mb-5 py-4 bg-light rounded shadow-sm border">
-    <h2 class="text-center mb-4"><i class="bi bi-leaf"></i> Guia de Deficiências Nutricionais</h2>
-    
-    
-    
-    <div class="table-responsive px-md-4">
-      <table class="table table-hover align-middle bg-white">
-        <thead class="table-dark text-center">
-          <tr>
-            <th>Nutriente</th>
-            <th>Sintomas Visuais</th>
-            <th>Localização na Planta</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="fw-bold">Nitrogênio (N)</td><td>Clorose (amarelamento) uniforme.</td><td>Folhas Velhas (Base)</td></tr>
-          <tr><td class="fw-bold">Fósforo (P)</td><td>Tonalidade roxa/bronzeada.</td><td>Folhas Velhas</td></tr>
-          <tr><td class="fw-bold">Potássio (K)</td><td>Queima (necrose) das margens.</td><td>Folhas Velhas</td></tr>
-          <tr><td class="fw-bold">Magnésio (Mg)</td><td>Clorose entre nervuras.</td><td>Folhas Velhas</td></tr>
-          <tr><td class="fw-bold">Boro (B)</td><td>Folhas deformadas e corticosas.</td><td>Ponteiros (Novas)</td></tr>
-          <tr><td class="fw-bold">Zinco (Zn)</td><td>Entrenós curtos e folhas estreitas.</td><td>Folhas Novas</td></tr>
-        </tbody>
-      </table>
+  <section id="nutricao" class="container text-center mb-5">
+    <div class="d-grid gap-2 col-md-6 mx-auto">
+      <button class="btn btn-dark btn-lg shadow fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNutricao" aria-expanded="false" aria-controls="collapseNutricao">
+        <i class="bi bi-leaf-fill text-success"></i> GUIA DE DEFICIÊNCIA NUTRICIONAL
+      </button>
+    </div>
+
+    <div class="collapse mt-4" id="collapseNutricao">
+      <div class="card card-body bg-light border-0 shadow-sm">
+        <h4 class="mb-4">Diagnóstico Visual de Nutrientes</h4>
+        <div class="table-responsive px-md-4">
+          <table class="table table-hover align-middle bg-white border">
+            <thead class="table-dark">
+              <tr>
+                <th>Nutriente</th>
+                <th>Sintomas Visuais</th>
+                <th>Localização</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="fw-bold">Nitrogênio (N)</td><td>Amarelamento (clorose) uniforme da folha.</td><td>Folhas Velhas</td></tr>
+              <tr><td class="fw-bold">Fósforo (P)</td><td>Tonalidade roxa ou bronzeada.</td><td>Folhas Velhas</td></tr>
+              <tr><td class="fw-bold">Potássio (K)</td><td>Necrose (queima) das bordas foliares.</td><td>Folhas Velhas</td></tr>
+              <tr><td class="fw-bold">Magnésio (Mg)</td><td>Clorose entre as nervuras principais.</td><td>Folhas Velhas</td></tr>
+              <tr><td class="fw-bold">Boro (B)</td><td>Folhas novas deformadas e pontas secas.</td><td>Folhas Novas</td></tr>
+              <tr><td class="fw-bold">Zinco (Zn)</td><td>Folhas miúdas, estreitas e entrenós curtos.</td><td>Folhas Novas</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </section>
 
