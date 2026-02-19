@@ -1,88 +1,76 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cochonilhas — Manejo Integrado</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cochonilhas — Agrodata</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b1a0e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body class="page-cochonilhas">
+<body class="page-detalhes">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">AgroCafé</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Monitoramento</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0b1a0e;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
+      <div class="ms-auto">
+         <a href="index.html" class="text-white text-decoration-none small">
+           <i class="bi bi-house-door-fill text-warning"></i> Início
+         </a>
+      </div>
+    </div>
+  </nav>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pragasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Entomologia
+  <section class="hero text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://revistacultivar.com.br/media/fotos/cochonilha_cafe_3.jpg') center/cover;">
+    <div class="container py-4">
+      <h1 class="display-5 fw-bold text-uppercase">Cochonilhas</h1>
+      <p class="lead">Pragas sugadoras que debilitam o cafeeiro.</p>
+    </div>
+  </section>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        
+        <h2 class="text-success fw-bold mb-4 text-center">Impacto no Manejo</h2>
+        <p class="text-muted">As cochonilhas sugam a seiva da planta e excretam uma substância açucarada que atrai fungos e formigas.</p>
+
+        <img src="https://www.fundecitrus.com.br/doencas/galeria/img/cochonilha.jpg" class="img-fluid rounded shadow-sm mb-4 w-100" alt="Cochonilha">
+
+        <h3 class="h5 fw-bold text-dark"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Danos Principais</h3>
+        <ul class="list-group list-group-flush mb-4">
+          <li class="list-group-item"><strong>Sucção de Seiva:</strong> Enfraquece ramos e folhas.</li>
+          <li class="list-group-item"><strong>Fumagina:</strong> Camada preta nas folhas que impede a fotossíntese.</li>
+          <li class="list-group-item"><strong>Cochonilha-da-raiz:</strong> Causa amarelamento generalizado e murcha.</li>
+        </ul>
+
+        <div class="p-4 rounded shadow-sm border-start border-4 border-warning mb-4" style="background-color: #f8f9fa;">
+          <h3 class="h5 fw-bold">Controle e Monitoramento</h3>
+          <p class="small mb-0">
+            O manejo envolve óleos minerais e inseticidas específicos. A presença de <strong>formigas</strong> é um sinal claro de infestação. No caso da raiz, o controle é via drench (esguicho) no período chuvoso.
+          </p>
+        </div>
+
+        <div class="d-grid gap-2 mb-5">
+          <a href="index.html" class="btn btn-success btn-lg shadow fw-bold text-uppercase py-3" style="background-color: #0b1a0e; border:none;">
+            <i class="bi bi-arrow-left me-2"></i> Voltar ao Painel
           </a>
-          <ul class="dropdown-menu" aria-labelledby="pragasDropdown">
-            <li><a class="dropdown-item" href="broca.html">Broca-do-café</a></li>
-            <li><a class="dropdown-item" href="bicho-mineiro.html">Bicho-mineiro</a></li>
-            <li><a class="dropdown-item" href="cochonilhas.html">Cochonilhas</a></li>
-            <li><a class="dropdown-item" href="cigarra.html">Cigarra-do-cafeeiro</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<section class="hero bg-success text-white text-center py-5" style="margin-top: 56px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://revistacultivar.com.br/media/fotos/cochonilha_cafe_3.jpg') center/cover;">
-  <div class="container py-5">
-    <h1 class="display-4 fw-bold">Cochonilhas</h1>
-    <p class="lead">Pragas sugadoras que debilitam a planta e favorecem doenças fúngicas.</p>
-  </div>
-</section>
-
-<div class="container section text-center mt-5">
-  <h2 class="mb-4">O Impacto das Cochonilhas no Cafeeiro</h2>
-  <p class="lead">Existem diversas espécies, mas todas compartilham o hábito de sugar a seiva e excretar substâncias açucaradas.</p>
-
-  <div class="row mt-5 align-items-center">
-    <div class="col-md-6 mb-4">
-      <img src="https://www.fundecitrus.com.br/doencas/galeria/img/cochonilha.jpg" class="img-fluid rounded shadow" alt="Cochonilha verde no café">
-    </div>
-    <div class="col-md-6 mb-4 text-start">
-      <h3>Danos Principais</h3>
-      <ul>
-        <li><strong>Sucção de Seiva:</strong> Enfraquece ramos e folhas, podendo causar murcha.</li>
-        <li><strong>Fumagina:</strong> O líquido açucarado que elas expelem atrai o fungo <em>Capnodium sp.</em>, que cobre as folhas com uma camada preta, impedindo a fotossíntese.</li>
-        <li><strong>Cochonilha-da-raiz:</strong> Ataca o sistema radicular, causando amarelamento generalizado, muitas vezes confundido com deficiência nutricional.</li>
-      </ul>
-      <p>Muitas vezes, a presença de <strong>formigas</strong> circulando no café é um sinal indireto de infestação por cochonilhas.</p>
-    </div>
-  </div>
-
-  
-
-  <div class="row mt-4">
-    <div class="col-12 text-start">
-      <div class="p-4 rounded shadow-sm border" style="background-color: #f8f9fa;">
-        <h3>Controle e Monitoramento</h3>
-        <p>O manejo das cochonilhas de parte aérea envolve o uso de óleos minerais associados a inseticidas específicos. Para a cochonilha-da-raiz, o controle é feito via drench (esguicho) ou granulados no solo durante o período chuvoso.</p>
-        <p><strong>Atenção:</strong> O controle das formigas pode ajudar indiretamente no controle das cochonilhas, pois elas protegem as pragas de predadores naturais.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <a href="index.html" class="btn btn-outline-dark mt-4 mb-5">← Voltar à Galeria</a>
-</div>
+  <footer class="bg-dark text-white text-center p-4">
+    <p class="mb-0 fw-bold">© 2026 Agrodata</p>
+    <small>Manejo Inteligente e Sustentável</small>
+  </footer>
 
-<footer class="bg-dark text-white text-center p-3 mt-5">
-  <p>© 2025 Portal do Café - Todos os direitos reservados.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
