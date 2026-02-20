@@ -9,13 +9,13 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg",
+      "src": "https://i.postimg.cc/MTpj41xC/cafezal.jpg",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "https://i.postimg.cc/G3yZwd6y/Broca-do-café.jpg",
+      "src": "https://i.postimg.cc/MTpj41xC/cafezal.jpg",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
