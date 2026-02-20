@@ -24,7 +24,7 @@
 </head>
 <body class="home-page">
 
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0b1a0e;">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Agrodata</a>
       <div class="ms-auto">
@@ -37,11 +37,15 @@
 
   <div id="container-clima" class="container d-none" style="margin-top: 75px;">
     <div id="alerta-clima" class="alert shadow-sm border-start border-4" role="alert">
-      <div class="d-flex align-items-center">
-        <div id="icon-clima" class="me-3 fs-2 text-dark"></div>
-        <div>
-          <h6 class="fw-bold mb-0 text-uppercase" id="titulo-alerta">Monitoramento Climático</h6>
-          <small id="texto-clima" class="d-block">Sincronizando dados...</small>
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <div id="icon-clima" class="fs-1 text-dark"></div>
+        </div>
+        <div class="col">
+          <h6 class="fw-bold mb-1 text-uppercase" id="titulo-alerta">Monitoramento Climático</h6>
+          <div id="dados-clima-detalhado">
+              </div>
+          <small id="texto-clima" class="d-block mt-2 pt-2 border-top">Sincronizando inteligência...</small>
         </div>
       </div>
     </div>
@@ -214,43 +218,76 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
   <script>
+    // Configurações da API
     const API_KEY = "bed96f1025620d784160d45025ba9a6a"; 
     const CIDADE = "Garça,BR";
 
     async function atualizarClima() {
-      if(API_KEY === "bed96f1025620d784160d45025ba9a6a") return;
       try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CIDADE}&units=metric&lang=pt_br&appid=${API_KEY}`);
         const data = await response.json();
+
+        if (data.cod !== 200) return;
+
         const temp = data.main.temp;
+        const tempMax = data.main.temp_max;
+        const tempMin = data.main.temp_min;
         const umidade = data.main.humidity;
+        const condicao = data.weather[0].description;
+        const iconCode = data.weather[0].icon;
+
         const container = document.getElementById('container-clima');
         const alertaBox = document.getElementById('alerta-clima');
-        const texto = document.getElementById('texto-clima');
-        const icon = document.getElementById('icon-clima');
+        const textoAlerta = document.getElementById('texto-clima');
+        const dadosDetalhados = document.getElementById('dados-clima-detalhado');
+        const iconDiv = document.getElementById('icon-clima');
+
         container.classList.remove('d-none');
 
+        // 1. Atualizar Ícone Visual
+        iconDiv.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" width="60" alt="clima">`;
+
+        // 2. Atualizar Dados de Temperatura e Previsão do Dia
+        dadosDetalhados.innerHTML = `
+            <div class="mb-0">
+                <span class="fs-3 fw-bold">${temp.toFixed(1)}°C</span> 
+                <span class="text-capitalize ms-2 small text-secondary">${condicao}</span>
+            </div>
+            <div class="small text-muted">
+                <i class="bi bi-arrow-up text-danger"></i> Máx: ${tempMax.toFixed(0)}° 
+                <i class="bi bi-arrow-down text-primary"></i> Mín: ${tempMin.toFixed(0)}° 
+                <i class="bi bi-droplets ms-2"></i> Umidade: ${umidade}%
+            </div>
+        `;
+
+        // 3. Lógica de Alerta Técnico AgroData
         if (temp > 30 && umidade < 45) {
           alertaBox.className = "alert alert-danger shadow-sm border-start border-4 border-danger";
-          icon.innerHTML = '<i class="bi bi-thermometer-sun text-danger"></i>';
-          texto.innerHTML = `<strong>ALERTA:</strong> Risco de Bicho-Mineiro (${temp.toFixed(1)}°C).`;
-        } else if (umidade > 80) {
+          textoAlerta.innerHTML = `<strong>ALERTA CRÍTICO:</strong> Clima propício para <strong>Bicho-Mineiro</strong>. Monitore o talhão.`;
+        } else if (umidade > 80 && temp >= 18 && temp <= 24) {
           alertaBox.className = "alert alert-warning shadow-sm border-start border-4 border-warning";
-          icon.innerHTML = '<i class="bi bi-droplets-fill text-primary"></i>';
-          texto.innerHTML = `<strong>MONITORAMENTO:</strong> Umidade alta (${umidade}%). Atenção à Ferrugem.`;
+          textoAlerta.innerHTML = `<strong>ATENÇÃO:</strong> Umidade alta (${umidade}%). Risco elevado de <strong>Ferrugem</strong>.`;
+        } else if (temp < 12) {
+          alertaBox.className = "alert alert-info shadow-sm border-start border-4 border-info";
+          textoAlerta.innerHTML = `<strong>AVISO:</strong> Baixa temperatura detectada. Atenção ao desenvolvimento vegetativo.`;
         } else {
           alertaBox.className = "alert alert-success shadow-sm border-start border-4 border-success";
-          icon.innerHTML = '<i class="bi bi-sun-fill text-warning"></i>';
-          texto.innerHTML = `Clima estável em ${data.name}: ${temp.toFixed(1)}°C.`;
+          textoAlerta.innerHTML = `<strong>ESTÁVEL:</strong> Condições ideais para o manejo em ${data.name}.`;
         }
-      } catch (err) { console.log(err); }
+
+      } catch (err) { 
+        console.error("Erro ao carregar clima:", err); 
+      }
     }
 
+    // Registro do Service Worker
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("sw.js").catch(err => console.log(err));
       });
     }
+
+    // Inicia a função
     atualizarClima();
   </script>
 </body>
