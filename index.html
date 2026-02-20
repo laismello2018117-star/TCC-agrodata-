@@ -263,7 +263,7 @@
         // 3. Lógica de Alerta Técnico AgroData
         if (temp > 30 && umidade < 45) {
           alertaBox.className = "alert alert-danger shadow-sm border-start border-4 border-danger";
-          textoAlerta.innerHTML = `<strong>ALERTA CRÍTICO:</strong> Clima propício para <strong>Bicho-Mineiro</strong>. Monitore o talhão.`;
+          textoAlerta.innerHTML = `<strong>ALERTA CRÍTICO:</strong> Clima propício para <strong>Bicho-Mineiro</strong>.`;
         } else if (umidade > 80 && temp >= 18 && temp <= 24) {
           alertaBox.className = "alert alert-warning shadow-sm border-start border-4 border-warning";
           textoAlerta.innerHTML = `<strong>ATENÇÃO:</strong> Umidade alta (${umidade}%). Risco elevado de <strong>Ferrugem</strong>.`;
