@@ -217,14 +217,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
-  <script>
-    // Configurações da API
+<script>
+    // CONFIGURAÇÃO PRECISA PARA GARÇA-SP
     const API_KEY = "bed96f1025620d784160d45025ba9a6a"; 
-    const CIDADE = "Garça,BR";
+    const LAT = "-22.2106"; // Latitude exata de Garça
+    const LON = "-49.6562"; // Longitude exata de Garça
 
     async function atualizarClima() {
       try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CIDADE}&units=metric&lang=pt_br&appid=${API_KEY}`);
+        // Chamada usando coordenadas para evitar erro de cidade homônima
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&lang=pt_br&appid=${API_KEY}`);
         const data = await response.json();
 
         if (data.cod !== 200) return;
@@ -243,11 +245,12 @@
         const iconDiv = document.getElementById('icon-clima');
 
         container.classList.remove('d-none');
+        document.getElementById('titulo-alerta').innerHTML = `Clima em Garça / SP`;
 
-        // 1. Atualizar Ícone Visual
+        // 1. Ícone Animado da API
         iconDiv.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" width="60" alt="clima">`;
 
-        // 2. Atualizar Dados de Temperatura e Previsão do Dia
+        // 2. Dados de Temperatura (Atual, Máx e Mín)
         dadosDetalhados.innerHTML = `
             <div class="mb-0">
                 <span class="fs-3 fw-bold">${temp.toFixed(1)}°C</span> 
@@ -260,19 +263,19 @@
             </div>
         `;
 
-        // 3. Lógica de Alerta Técnico AgroData
+        // 3. Lógica de Alerta Técnico
         if (temp > 30 && umidade < 45) {
           alertaBox.className = "alert alert-danger shadow-sm border-start border-4 border-danger";
           textoAlerta.innerHTML = `<strong>ALERTA CRÍTICO:</strong> Clima propício para <strong>Bicho-Mineiro</strong>.`;
         } else if (umidade > 80 && temp >= 18 && temp <= 24) {
           alertaBox.className = "alert alert-warning shadow-sm border-start border-4 border-warning";
-          textoAlerta.innerHTML = `<strong>ATENÇÃO:</strong> Umidade alta (${umidade}%). Risco elevado de <strong>Ferrugem</strong>.`;
-        } else if (temp < 12) {
+          textoAlerta.innerHTML = `<strong>ATENÇÃO:</strong> Umidade alta (${umidade}%). Risco de <strong>Ferrugem</strong>.`;
+        } else if (temp < 13) {
           alertaBox.className = "alert alert-info shadow-sm border-start border-4 border-info";
-          textoAlerta.innerHTML = `<strong>AVISO:</strong> Baixa temperatura detectada. Atenção ao desenvolvimento vegetativo.`;
+          textoAlerta.innerHTML = `<strong>AVISO:</strong> Baixa temperatura. Metabolismo do café reduzido.`;
         } else {
           alertaBox.className = "alert alert-success shadow-sm border-start border-4 border-success";
-          textoAlerta.innerHTML = `<strong>ESTÁVEL:</strong> Condições ideais para o manejo em ${data.name}.`;
+          textoAlerta.innerHTML = `<strong>ESTÁVEL:</strong> Condições ideais para o manejo do cafezal.`;
         }
 
       } catch (err) { 
@@ -280,14 +283,12 @@
       }
     }
 
-    // Registro do Service Worker
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
         navigator.serviceWorker.register("sw.js").catch(err => console.log(err));
       });
     }
 
-    // Inicia a função
     atualizarClima();
   </script>
 </body>
