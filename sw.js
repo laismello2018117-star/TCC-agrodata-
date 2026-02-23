@@ -4,9 +4,30 @@
     const LAT = "-22.2106";
     const LON = "-49.6562";
 
+    // FUNÇÃO DA CALCULADORA DE CALAGEM (Adicionada)
+    function calcularCalagem() {
+      const v1 = parseFloat(document.getElementById('v1').value);
+      const v2 = parseFloat(document.getElementById('v2').value);
+      const ctc = parseFloat(document.getElementById('ctc').value);
+      const prnt = parseFloat(document.getElementById('prnt').value);
+
+      // Mantendo a lógica de validação simples
+      if (v1 >= 0 && v2 && ctc && prnt) {
+        // NC (t/ha) = [(V2 - V1) * CTC] / PRNT
+        let nc = ((v2 - v1) * ctc) / prnt;
+        
+        if (nc < 0) nc = 0;
+        
+        document.getElementById('valor-nc').innerText = nc.toFixed(2);
+        document.getElementById('resultado-calc').classList.remove('d-none');
+      } else {
+        alert("Por favor, preencha todos os campos da análise de solo corretamente.");
+      }
+    }
+
+    // FUNÇÃO DE CLIMA (Sua lógica atualizada com Forecast)
     async function atualizarClima() {
         try {
-            // Mudamos para o endpoint 'forecast' para obter as variações reais de temp do dia
             const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&lang=pt_br&appid=${API_KEY}`);
             const data = await response.json();
 
@@ -15,16 +36,12 @@
                 return;
             }
 
-            // Dados Atuais (Primeiro item da lista)
             const atual = data.list[0];
             const tempAtual = atual.main.temp;
             const umidade = atual.main.humidity;
             const condicao = atual.weather[0].description;
             const iconCode = atual.weather[0].icon;
 
-            // LÓGICA PARA MÁXIMA E MÍNIMA REAL:
-            // Percorremos as próximas 24 horas (os primeiros 8 registros de 3h) 
-            // para encontrar os picos reais de temperatura.
             let tempMaxReal = -100;
             let tempMinReal = 100;
 
@@ -41,11 +58,9 @@
 
             container.classList.remove('d-none');
 
-            // Atualiza Ícone e Título
             iconDiv.innerHTML = `<img src="https://openweathermap.org/img/wn/${iconCode}@2x.png" width="60" alt="clima">`;
             document.getElementById('titulo-alerta').innerHTML = `Clima em Garça / SP`;
             
-            // Monta o resumo com as temperaturas calculadas corretamente
             const resumoClima = `
                 <div class="mb-1">
                     <span class="fw-bold fs-3">${tempAtual.toFixed(1)}°C</span> 
@@ -58,7 +73,6 @@
                 </div>
             `;
             
-            // Inteligência AgroData baseada na temperatura atual
             let mensagemTecnica = "";
             let statusClass = "";
 
