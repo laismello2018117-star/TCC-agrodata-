@@ -82,6 +82,47 @@
     </div>
   </section>
 
+  <section id="calculadora" class="container mb-5">
+    <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
+      <button class="btn btn-warning btn-lg shadow fw-bold py-3 text-uppercase"  
+              type="button" data-bs-toggle="collapse" data-bs-target="#collapseCalagem">
+        <i class="bi bi-calculator-fill me-2"></i> Calculadora de Calagem
+      </button>
+    </div>
+
+    <div class="collapse" id="collapseCalagem">
+      <div class="card card-body bg-light border-0 shadow text-dark mb-4 text-start">
+        <div class="row g-3">
+          <div class="col-6">
+            <label class="form-label small fw-bold">V1 (Saturação Atual %)</label>
+            <input type="number" id="v1" class="form-control" placeholder="Ex: 40">
+          </div>
+          <div class="col-6">
+            <label class="form-label small fw-bold">V2 (Desejada %)</label>
+            <input type="number" id="v2" class="form-control" value="70">
+          </div>
+          <div class="col-6">
+            <label class="form-label small fw-bold">CTC (cmolc/dm³)</label>
+            <input type="number" id="ctc" class="form-control" placeholder="Ex: 8.5">
+          </div>
+          <div class="col-6">
+            <label class="form-label small fw-bold">PRNT (%)</label>
+            <input type="number" id="prnt" class="form-control" value="80">
+          </div>
+          <div class="col-12">
+            <button onclick="calcularCalagem()" class="btn btn-success w-100 fw-bold py-2">CALCULAR T/HA</button>
+          </div>
+        </div>
+        <div id="resultado-calc" class="mt-3 d-none">
+          <div class="alert alert-dark mb-0 text-center">
+            <small class="text-uppercase d-block">Necessidade de Calcário:</small>
+            <h2 class="fw-bold mb-0"><span id="valor-nc">0</span> <small>t/ha</small></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="pragas" class="container text-center mb-4">
     <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
       <button class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase"  
@@ -250,29 +291,29 @@
             </div>
           </div>
 
-            <div class="col-6 col-md-4">
+          <div class="col-6 col-md-4">
             <div class="card h-100 border-0 shadow-sm overflow-hidden text-start">
-              <img src="https://i.postimg.cc/qqYr0MJR/deficiencia_de_ferro.jpg" class="card-img-top" alt="Boro" style="height: 120px; object-fit: cover;">
+              <img src="https://i.postimg.cc/qqYr0MJR/deficiencia_de_ferro.jpg" class="card-img-top" alt="Ferro" style="height: 120px; object-fit: cover;">
               <div class="card-body p-2">
                 <h6 class="fw-bold mb-1" style="font-size: 0.9rem;">Ferro (Fe)</h6>
-                <small class="text-harvest d-block" style="font-size: 0.75rem;">Folhas novas amareladas com nervuras verdes (reticulado fino).</small>
+                <small class="text-harvest d-block" style="font-size: 0.75rem;">Folhas novas amareladas com nervuras verdes.</small>
               </div>
             </div>
           </div>
 
           <div class="col-6 col-md-4">
             <div class="card h-100 border-0 shadow-sm overflow-hidden text-start">
-              <img src="https://i.postimg.cc/g2m2cs3m/enxofre-deficiencia.jpg" class="card-img-top" alt="Zinco" style="height: 120px; object-fit: cover;">
+              <img src="https://i.postimg.cc/g2m2cs3m/enxofre-deficiencia.jpg" class="card-img-top" alt="Enxofre" style="height: 120px; object-fit: cover;">
               <div class="card-body p-2">
                 <h6 class="fw-bold mb-1" style="font-size: 0.9rem;">Enxofre (S)</h6>
-                <small class="text-harvest d-block" style="font-size: 0.75rem;">Folhas novas amareladas (diferente do N, que é nas velhas).</small>
+                <small class="text-harvest d-block" style="font-size: 0.75rem;">Folhas novas amareladas (folhas do topo).</small>
               </div>
             </div>
           </div>
 
           <div class="col-6 col-md-4">
             <div class="card h-100 border-0 shadow-sm overflow-hidden text-start">
-              <img src="https://i.postimg.cc/ZnZnZnZn/deficiencia-zinco.jpg" class="card-img-top" alt="Zinco" style="height: 120px; object-fit: cover;">
+              <img src="https://i.postimg.cc/ZnZnZnZn/deficiencia-calcio.jpg" class="card-img-top" alt="Cálcio" style="height: 120px; object-fit: cover;">
               <div class="card-body p-2">
                 <h6 class="fw-bold mb-1" style="font-size: 0.9rem;">Cálcio (Ca)</h6>
                 <small class="text-harvest d-block" style="font-size: 0.75rem;">Deforma a estrutura física da folha.</small>
@@ -292,7 +333,24 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
-<script>
+  <script>
+    // FUNÇÃO DA CALCULADORA DE CALAGEM
+    function calcularCalagem() {
+      const v1 = parseFloat(document.getElementById('v1').value);
+      const v2 = parseFloat(document.getElementById('v2').value);
+      const ctc = parseFloat(document.getElementById('ctc').value);
+      const prnt = parseFloat(document.getElementById('prnt').value);
+
+      if (v1 >= 0 && v2 && ctc && prnt) {
+        let nc = ((v2 - v1) * ctc) / prnt;
+        if (nc < 0) nc = 0;
+        document.getElementById('valor-nc').innerText = nc.toFixed(2);
+        document.getElementById('resultado-calc').classList.remove('d-none');
+      } else {
+        alert("Preencha todos os campos corretamente.");
+      }
+    }
+
     const API_KEY = "bed96f1025620d784160d45025ba9a6a"; 
     const LAT = "-22.2106";
     const LON = "-49.6562";
