@@ -1,13 +1,15 @@
 /* === VARIÁVEIS DE CORES AGRO (V2) === */
 :root {
-  --bg-1: #1b542b;       /* Verde floresta profundo */
-  --bg-2: #f8fcf8;       /* Branco levemente esverdeado para seções claras */
+  --bg-1: #164f1f;       /* Verde fundo do site */
+  --bg-2: #f8fcf8;       /* Branco levemente esverdeado */
   --text-1: #e9f5e9;     /* Texto claro */
   --text-dark: #1a2e1d;  /* Texto escuro */
   --accent: #2ecc71;     /* Verde folha principal */
   --accent-hover: #27ae60; 
   --harvest: #ffc107;    /* Amarelo Ouro para DETALHES */
   --muted: #a0ac9f;      /* Cinza esverdeado */
+  --marrom: #6f4e37;     /* marrom café para detalhes */
+  --azul: #00bfff;      /* azul céu para detalhes */
 }
 
 /* === RESET E BASE === */
