@@ -132,6 +132,44 @@
     </div>
   </section>
 
+  <section id="fenologia" class="container mb-5">
+    <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
+      <button class="btn btn-info btn-lg shadow fw-bold py-3 text-uppercase collapsed text-white"  
+              type="button" data-bs-toggle="collapse" data-bs-target="#collapseFeno">
+        <i class="bi bi-calendar3 me-2"></i> Calendário Fenológico
+      </button>
+    </div>
+
+    <div class="collapse" id="collapseFeno">
+      <div class="card card-body bg-light border-0 shadow text-dark mb-4">
+        <div id="status-fenologico" class="alert alert-info border-0 shadow-sm mb-4 text-center">
+          <h5 class="fw-bold mb-1"><i class="bi bi-info-circle-fill"></i> Fase Atual Estimada</h5>
+          <div id="fase-texto" class="fs-4 fw-bold text-uppercase">Detectando Mês...</div>
+          <p id="manejo-sugerido" class="small mb-0 mt-2"></p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered text-center small align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>Fase</th>
+                <th>Período</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="fw-bold">Floração</td><td>Set - Nov</td><td>Início do ciclo e definição produtiva.</td></tr>
+              <tr><td class="fw-bold">Chumbinho</td><td>Nov - Jan</td><td>Fase crítica para nutrição e pegamento.</td></tr>
+              <tr><td class="fw-bold">Expansão</td><td>Jan - Mar</td><td>Crescimento rápido e enchimento dos grãos.</td></tr>
+              <tr><td class="fw-bold">Maturação</td><td>Abr - Jun</td><td>Definição da qualidade e maturação dos frutos.</td></tr>
+              <tr><td class="fw-bold">Colheita</td><td>Mai - Ago</td><td>Pico de colheita e preparo de terreiros.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="pragas" class="container text-center mb-4">
     <div class="d-grid gap-2 col-md-6 mx-auto mb-4">
       <button class="btn btn-success btn-lg shadow fw-bold py-3 text-uppercase"  
