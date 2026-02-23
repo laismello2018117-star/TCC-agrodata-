@@ -4,14 +4,14 @@
     const LAT = "-22.2106";
     const LON = "-49.6562";
 
-    // FUNÇÃO DA CALCULADORA DE CALAGEM (Adicionada)
+    // CALCULADORA DE CALAGEM 
     function calcularCalagem() {
       const v1 = parseFloat(document.getElementById('v1').value);
       const v2 = parseFloat(document.getElementById('v2').value);
       const ctc = parseFloat(document.getElementById('ctc').value);
       const prnt = parseFloat(document.getElementById('prnt').value);
 
-      // Mantendo a lógica de validação simples
+      // lógica de validação 
       if (v1 >= 0 && v2 && ctc && prnt) {
         // NC (t/ha) = [(V2 - V1) * CTC] / PRNT
         let nc = ((v2 - v1) * ctc) / prnt;
@@ -25,7 +25,7 @@
       }
     }
 
-    // FUNÇÃO DE CLIMA (Sua lógica atualizada com Forecast)
+    // FUNÇÃO DE CLIMA COM FORECAST
     async function atualizarClima() {
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${LAT}&lon=${LON}&units=metric&lang=pt_br&appid=${API_KEY}`);
