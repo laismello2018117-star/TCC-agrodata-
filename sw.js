@@ -1,3 +1,6 @@
+Aqui está o seu bloco de <script> atualizado. Mantive todas as suas funções de clima, a calculadora de calagem e as configurações originais, apenas inserindo a nova lógica de fenologia ao final, conforme solicitado:
+
+JavaScript
 <script>
     // Configurações da API de Clima - Garça, SP, Brasil
     const API_KEY = "bed96f1025620d784160d45025ba9a6a"; 
@@ -23,6 +26,36 @@
       } else {
         alert("Por favor, preencha todos os campos da análise de solo corretamente.");
       }
+    }
+
+    // FUNÇÃO DE FENOLOGIA
+    function atualizarFenologia() {
+        const mesAtual = new Date().getMonth(); 
+        const faseTexto = document.getElementById('fase-texto');
+        const manejoSugerido = document.getElementById('manejo-sugerido');
+
+        let fase = "";
+        let manejo = "";
+
+        if (mesAtual >= 8 && mesAtual <= 10) { 
+            fase = "Floração / Chumbinho";
+            manejo = "Foco em controle de pragas iniciais e adubação nitrogenada.";
+        } else if (mesAtual >= 11 || mesAtual <= 0) { 
+            fase = "Chumbinho / Formação";
+            manejo = "Monitorar Bicho-Mineiro e Ferrugem. Adubações de cobertura.";
+        } else if (mesAtual >= 1 && mesAtual <= 2) { 
+            fase = "Expansão e Granação";
+            manejo = "Fase de enchimento de grãos. Atenção à nutrição via folha.";
+        } else if (mesAtual >= 3 && mesAtual <= 5) { 
+            fase = "Maturação / Colheita";
+            manejo = "Acompanhar maturação e preparar logística de colheita.";
+        } else { 
+            fase = "Colheita / Repouso";
+            manejo = "Pós-colheita e planejamento da próxima safra.";
+        }
+
+        if(faseTexto) faseTexto.innerText = fase;
+        if(manejoSugerido) manejoSugerido.innerHTML = `<strong>Manejo Sugerido:</strong> ${manejo}`;
     }
 
     // FUNÇÃO DE CLIMA COM FORECAST
@@ -108,4 +141,5 @@
     }
 
     atualizarClima();
+    atualizarFenologia();
 </script>
